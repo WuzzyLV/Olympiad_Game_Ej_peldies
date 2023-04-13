@@ -6,18 +6,19 @@ public class PickUp : Area2D
 
     bool colliding = false;
 
-    public void _on_Area2D_body_entered(Node body)
+    public void _on_Trash_body_entered(Node body)
     {
         colliding = true;
     }
-    public void _on_Area2D_body_exited(Node body)
+    public void _on_Trash_body_exited(Node body)
     {
         colliding = false;
     }
 
     public override void _PhysicsProcess(float delta)
     {
-        Player player = GetNode<Player>("../Player");
+        Timer timer = GetNode<Timer>("/root/MainScene/Area2D/Timer");
+        Player player = GetNode<Player>("/root/MainScene/Player");
         
         if (!player.picked)
         {
@@ -27,6 +28,7 @@ public class PickUp : Area2D
                 {
                     QueueFree();
                     player.picked = true;
+                    timer.count -=1 ;
                 }
             }
         }
