@@ -4,15 +4,15 @@ using System;
 public class PickUp : Area2D
 {
 
-    bool picked = false;
+    bool colliding = false;
 
     public void _on_Area2D_body_entered(Node body)
     {
-        picked = true;
+        colliding = true;
     }
     public void _on_Area2D_body_exited(Node body)
     {
-        picked = false;
+        colliding = false;
     }
 
     public override void _PhysicsProcess(float delta)
@@ -21,7 +21,7 @@ public class PickUp : Area2D
         
         if (!player.picked)
         {
-            if (picked)
+            if (colliding)
             {
                 if (Input.IsActionJustPressed("ui_pickup"))
                 {
@@ -31,9 +31,6 @@ public class PickUp : Area2D
             }
         }
 
-        if (Input.IsActionJustPressed("ui_drop"))
-        {
-            player.picked = false;
-        }
+       
     }
 }
