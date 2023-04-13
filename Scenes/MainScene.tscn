@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Area/CollisionChecker.cs" type="Script" id=1]
-[ext_resource path="res://Player/Movement.cs" type="Script" id=2]
-[ext_resource path="res://tilesheet_complete.png" type="Texture" id=3]
+[ext_resource path="res://Player/Player.cs" type="Script" id=2]
+[ext_resource path="res://Tiles/tilesheet_complete.png" type="Texture" id=3]
 [ext_resource path="res://Player/icon.png" type="Texture" id=4]
+[ext_resource path="res://Trash/Trash.tscn" type="PackedScene" id=5]
 
 [sub_resource type="TileSet" id=2]
 0/name = "tilesheet_complete.png 0"
@@ -96,8 +97,14 @@ tile_set = SubResource( 3 )
 format = 1
 tile_data = PoolIntArray( -589820, 0, 0, -458765, 0, 0, -458761, 0, 0, -458753, 0, 0, -458741, 0, 0, -262147, 0, 0, -262141, 0, 0, -196602, 0, 0, -65543, 0, 0, -14, 0, 0, 11, 0, 0, 262134, 0, 0, 262154, 0, 0, 393201, 0, 0, 393209, 0, 0, 327681, 0, 0, 327682, 0, 0 )
 
+[node name="Trash1" parent="." instance=ExtResource( 5 )]
+position = Vector2( -467, -530 )
+
+[node name="Trash2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -385, -367 )
+
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( -571, -379 )
+position = Vector2( -552, -304 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

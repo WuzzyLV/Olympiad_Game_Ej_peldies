@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ss\\Documents\\LakeGameMain\\MainGame.csproj": {}
+    "C:\\USERS\\SS\\DOCUMENTS\\LAKEGAMEMAIN\\MainGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ss\\Documents\\LakeGameMain\\MainGame.csproj": {
+    "C:\\USERS\\SS\\DOCUMENTS\\LAKEGAMEMAIN\\MainGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ss\\Documents\\LakeGameMain\\MainGame.csproj",
+        "projectUniqueName": "C:\\USERS\\SS\\DOCUMENTS\\LAKEGAMEMAIN\\MainGame.csproj",
         "projectName": "MainGame",
-        "projectPath": "C:\\Users\\ss\\Documents\\LakeGameMain\\MainGame.csproj",
+        "projectPath": "C:\\USERS\\SS\\DOCUMENTS\\LAKEGAMEMAIN\\MainGame.csproj",
         "packagesPath": "C:\\Users\\ss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ss\\Documents\\LakeGameMain\\.mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\ss\\DOCUMENTS\\LAKEGAMEMAIN\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ss\\AppData\\Roaming\\NuGet\\NuGet.Config",
