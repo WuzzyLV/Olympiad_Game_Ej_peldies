@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Timer : Godot.Timer
+public class ItemSpawner : Godot.Timer
 {
 
     private PackedScene trash;

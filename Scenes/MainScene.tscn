@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Area/Timer.cs" type="Script" id=1]
+[ext_resource path="res://Area/ItemSpawner.cs" type="Script" id=1]
 [ext_resource path="res://Player/Player.cs" type="Script" id=2]
 [ext_resource path="res://Tiles/tilesheet_complete.png" type="Texture" id=3]
 [ext_resource path="res://Player/Character.png" type="Texture" id=4]
@@ -109,10 +109,10 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 1, -1 )
+position = Vector2( 2, -2 )
 shape = SubResource( 6 )
 
-[node name="Timer" type="Timer" parent="Area2D"]
+[node name="ItemSpawner" type="Timer" parent="Area2D"]
 autostart = true
 script = ExtResource( 1 )
 
@@ -165,4 +165,4 @@ shape = SubResource( 5 )
 position = Vector2( -93, -724 )
 shape = SubResource( 5 )
 
-[connection signal="timeout" from="Area2D/Timer" to="Area2D/Timer" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Area2D/ItemSpawner" to="Area2D/ItemSpawner" method="_on_Timer_timeout"]

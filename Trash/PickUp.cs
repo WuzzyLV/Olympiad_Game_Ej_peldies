@@ -17,9 +17,10 @@ public class PickUp : Area2D
 
     public override void _PhysicsProcess(float delta)
     {
-        Timer timer = GetNode<Timer>("/root/MainScene/Area2D/Timer");
-        Player player = GetNode<Player>("/root/MainScene/Player");
+        ItemSpawner itemSpawner = GetNode<ItemSpawner>("/root/MainScene/Area2D/ItemSpawner");
         
+        Player player = GetNode<Player>("/root/MainScene/Player");
+
         if (!player.picked)
         {
             if (colliding)
@@ -28,7 +29,7 @@ public class PickUp : Area2D
                 {
                     QueueFree();
                     player.picked = true;
-                    timer.count -=1 ;
+                    itemSpawner.count -=1 ;
                 }
             }
         }
