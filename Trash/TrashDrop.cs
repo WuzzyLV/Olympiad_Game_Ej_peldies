@@ -19,16 +19,17 @@ public class TrashDrop : Area2D
 
     public override void _PhysicsProcess(float delta)
     {
-        Player player = GetNode<Player>("../Player");
+        Global g = GetNode<Global>("/root/Global");
+        
         
         if(colliding)
         {
-            if (player.picked)
+            if (g.picked)
             {
                 if (Input.IsActionJustPressed("ui_drop"))
                 {
-                    player.picked = false;
-                    player.score++;
+                    g.picked = false;
+                    g.score++;
                 }
             }
         }

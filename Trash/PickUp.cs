@@ -17,18 +17,17 @@ public class PickUp : Area2D
 
     public override void _PhysicsProcess(float delta)
     {
-        ItemSpawner itemSpawner = GetNode<ItemSpawner>("/root/MainScene/Area2D/ItemSpawner");
-        
-        Player player = GetNode<Player>("/root/MainScene/Player");
-
-        if (!player.picked)
+        ItemSpawner itemSpawner = GetNode<ItemSpawner>("/root/GameScene/Area2D/ItemSpawner");
+       
+        Global g = GetNode<Global>("/root/Global");
+        if (!g.picked)
         {
             if (colliding)
             {
                 if (Input.IsActionJustPressed("ui_pickup"))
                 {
                     QueueFree();
-                    player.picked = true;
+                    g.picked = true;
                     itemSpawner.count -=1 ;
                 }
             }

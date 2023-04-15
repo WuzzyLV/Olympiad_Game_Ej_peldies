@@ -18,10 +18,17 @@ public class Timer : RichTextLabel
         milliseconds = Mathf.FloorToInt((timeElapsed % 1) * 100);
         timeString = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
         Text = timeString;
+       
+       
         if (timeElapsed <= 0)
-        { 
-            GetTree().ReloadCurrentScene(); 
+        {
+          
+            GetTree().ChangeScene("res://Scenes/GameOverScreen.tscn");
+        
+           
         }
     }
+            
+    
 }
 
