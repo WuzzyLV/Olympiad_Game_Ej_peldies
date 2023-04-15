@@ -18,15 +18,15 @@ public class ItemSpawner : Godot.Timer
         if(count!=maxCount)
         {
             Random rand = new Random();
-            int x = rand.Next(-200, 200);
-            int y = rand.Next(-200, 200);
-
+          
             Node2D items = (Node2D)trash.Instance();
 
-            items.Position = new Vector2(x, y);
+            items.Position = new Vector2(rand.Next(-425, 425), rand.Next(-225, 225));
 
             AddChild(items);
             count++;
+
+            WaitTime = rand.Next(1, 3);
         }
       
     }

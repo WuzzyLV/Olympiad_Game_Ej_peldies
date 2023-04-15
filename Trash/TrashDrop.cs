@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Xml.Schema;
 
 public class TrashDrop : Area2D
 {
@@ -19,7 +20,7 @@ public class TrashDrop : Area2D
     public override void _PhysicsProcess(float delta)
     {
         Player player = GetNode<Player>("../Player");
-
+        
         if(colliding)
         {
             if (player.picked)
@@ -27,10 +28,10 @@ public class TrashDrop : Area2D
                 if (Input.IsActionJustPressed("ui_drop"))
                 {
                     player.picked = false;
+                    player.score++;
                 }
             }
         }
-        
+
     }
- 
 }
