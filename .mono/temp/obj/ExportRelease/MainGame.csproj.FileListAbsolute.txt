@@ -1,0 +1,9 @@
+C:\Users\ss\Documents\LakeGameMain\.mono\temp\bin\ExportRelease\MainGame.dll
+C:\Users\ss\Documents\LakeGameMain\.mono\temp\bin\ExportRelease\MainGame.pdb
+C:\Users\ss\Documents\LakeGameMain\.mono\temp\obj\ExportRelease\MainGame.csproj.AssemblyReference.cache
+C:\Users\ss\Documents\LakeGameMain\.mono\temp\obj\ExportRelease\MainGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ss\Documents\LakeGameMain\.mono\temp\obj\ExportRelease\MainGame.AssemblyInfoInputs.cache
+C:\Users\ss\Documents\LakeGameMain\.mono\temp\obj\ExportRelease\MainGame.AssemblyInfo.cs
+C:\Users\ss\Documents\LakeGameMain\.mono\temp\obj\ExportRelease\MainGame.csproj.CoreCompileInputs.cache
+C:\Users\ss\Documents\LakeGameMain\.mono\temp\obj\ExportRelease\MainGame.dll
+C:\Users\ss\Documents\LakeGameMain\.mono\temp\obj\ExportRelease\MainGame.pdb
