@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GlassTrashCan.png-fea1e9b0e4124c7f7fd1b335252a0e74.stex"
+path="res://.import/glasstrashcan.png-a8140fc570de72db9aca1f246a43b286.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Trash/GlassTrashCan.png"
-dest_files=[ "res://.import/GlassTrashCan.png-fea1e9b0e4124c7f7fd1b335252a0e74.stex" ]
+source_file="res://Trash/glasstrashcan.png"
+dest_files=[ "res://.import/glasstrashcan.png-a8140fc570de72db9aca1f246a43b286.stex" ]
 
 [params]
 

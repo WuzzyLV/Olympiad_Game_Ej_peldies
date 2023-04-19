@@ -8,6 +8,8 @@ public class GlassPickUp : Area2D
     public void _on_Glass_body_entered(Node body)
     {
         colliding = true;
+       
+        
     }
     public void _on_Glass_body_exited(Node body)
     {

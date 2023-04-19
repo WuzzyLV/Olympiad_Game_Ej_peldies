@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PaperTrashCan.png-eaf52e30a21dc31981c1f5381e2650c2.stex"
+path="res://.import/papertrashcan.png-dc1503a70f6945d392a7962a470f485c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Trash/PaperTrashCan.png"
-dest_files=[ "res://.import/PaperTrashCan.png-eaf52e30a21dc31981c1f5381e2650c2.stex" ]
+source_file="res://Trash/papertrashcan.png"
+dest_files=[ "res://.import/papertrashcan.png-dc1503a70f6945d392a7962a470f485c.stex" ]
 
 [params]
 

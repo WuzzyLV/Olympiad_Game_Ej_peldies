@@ -18,15 +18,18 @@ public class ItemSpawner : Godot.Timer
         plasticTrash = (PackedScene)ResourceLoader.Load("res://Trash/Plastic.tscn");
     }
 
+ 
     public void _on_Timer_timeout()
     {
-        if (count != maxCount)
-        {
-            Random rand = new Random();
+        Node2D paperTrash = (Node2D)this.paperTrash.Instance();
+        Node2D glassTrash = (Node2D)this.glassTrash.Instance();
+        Node2D plasticTrash = (Node2D)this.plasticTrash.Instance();
 
-            Node2D paperTrash = (Node2D)this.paperTrash.Instance();
-            Node2D glassTrash = (Node2D)this.glassTrash.Instance();
-            Node2D plasticTrash = (Node2D)this.plasticTrash.Instance();
+        if (count <= maxCount)
+        {
+           Random rand = new Random();
+
+            
 
             paperTrash.Position = new Vector2(rand.Next(-425, 425), rand.Next(-225, 225));
             glassTrash.Position = new Vector2(rand.Next(-425, 425), rand.Next(-225, 225));
