@@ -4,7 +4,7 @@ using System.Reflection.Emit;
 
 public class Pickup : Godot.RichTextLabel
 {
-    float time = 1;
+    float time = 1f, counter = 1;
     Player player;
     public override void _Ready()
     {
@@ -18,10 +18,11 @@ public class Pickup : Godot.RichTextLabel
         Global g = GetNode<Global>("/root/Global");
         player = GetNode<Player>("/root/GameScene/player");
         this.SetPosition (new Vector2(player.Position.x, player.Position.y));
-        if(!g.plastic && !g.paper && !g.glass)
+        if(!g.plastic && !g.paper && !g.glass && !g.dropped)
         {
             Text = "";
-            time = -1;
+            time = 1f;
+            counter = 1f;
         }
 
         if (g.plastic)
@@ -39,18 +40,24 @@ public class Pickup : Godot.RichTextLabel
             Text = "+1 Glass";
             time -= delta;
         }
+
         GD.Print(g.dropped);
+
         if(g.dropped)
         {
             Text = "Item dropped";
             time -= delta;
-            g.dropped = false;
+            counter -= delta;
+            if (counter <= 0 || g.picked)
+            {
+                g.dropped = false;
+            }
         }
       
         GD.Print(time);
-        
+
         if (time <= 0)
-        {
+        { 
             Text = "";
             if (g.plastic)
                 return;
@@ -58,6 +65,7 @@ public class Pickup : Godot.RichTextLabel
                 return;
             if (g.glass)
                 return;
+            
             time = 1;
         }
     }
