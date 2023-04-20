@@ -22,9 +22,7 @@ public class Timer : RichTextLabel
        
         if (timeElapsed <= 0)
         {
-          
             GetTree().ChangeScene("res://Scenes/GameOverScreen.tscn");
-        
            
         }
     }

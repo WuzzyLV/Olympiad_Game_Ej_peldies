@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/MaldiniBold-EaqGW.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Test/TestScene.cs" type="Script" id=2]
+[ext_resource path="res://Test/Question.cs" type="Script" id=3]
+[ext_resource path="res://Test/Button3.cs" type="Script" id=4]
+[ext_resource path="res://Test/Button1.cs" type="Script" id=5]
+[ext_resource path="res://Test/Button2.cs" type="Script" id=6]
+[ext_resource path="res://Test/Button4.cs" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="TestScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -1848.0
+margin_top = -473.0
+margin_right = 2312.0
+margin_bottom = 1460.0
+color = Color( 0.0705882, 0.203922, 0.337255, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -107.5
+margin_top = 17.5
+margin_right = -4.5
+margin_bottom = 62.5
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_right = 103.0
+margin_bottom = 22.0
+rect_pivot_offset = Vector2( -794, -346 )
+script = ExtResource( 5 )
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+margin_top = 26.0
+margin_right = 103.0
+margin_bottom = 48.0
+script = ExtResource( 6 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = 16.5
+margin_right = 107.0
+margin_bottom = 63.5
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" type="Button" parent="VBoxContainer2"]
+margin_right = 102.0
+margin_bottom = 22.0
+script = ExtResource( 4 )
+
+[node name="Button2" type="Button" parent="VBoxContainer2"]
+margin_top = 26.0
+margin_right = 102.0
+margin_bottom = 48.0
+script = ExtResource( 7 )
+
+[node name="Question" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -336.0
+margin_top = -163.0
+margin_right = 336.0
+margin_bottom = -77.0
+align = 1
+valign = 1
+script = ExtResource( 3 )
+
+[node name="Score" type="Label" parent="."]
+margin_left = 883.0
+margin_top = 54.0
+margin_right = 923.0
+margin_bottom = 70.0

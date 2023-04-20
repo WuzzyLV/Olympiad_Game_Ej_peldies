@@ -8,5 +8,10 @@ public class GameOverScreen : Control
         GetTree().ChangeScene("res://Scenes/GameScene.tscn");
         Global g = GetNode<Global>("/root/Global");
         g.score = 0;
+        g.plastic = false;
+        g.paper = false;
+        g.glass = false;
+        g.dropped = false;
+        g.picked = false;
     }
 }

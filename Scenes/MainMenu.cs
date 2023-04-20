@@ -14,5 +14,11 @@ public class MainMenu : Control
         GetTree().ChangeScene("res://Scenes/Rules.tscn");
     }
 
+    public void _on_Test_pressed()
+    {
+        GetTree().ChangeScene("res://Test/Test.tscn");
+    }
+    
+
 
 }

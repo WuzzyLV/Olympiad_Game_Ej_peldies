@@ -52,5 +52,12 @@ margin_right = 112.0
 margin_bottom = 74.0
 text = "Back"
 
+[node name="Test" type="Button" parent="VBoxContainer"]
+margin_top = 78.0
+margin_right = 112.0
+margin_bottom = 100.0
+text = "Test"
+
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Rules" to="." method="_on_Rules_pressed"]
+[connection signal="pressed" from="VBoxContainer/Test" to="." method="_on_Test_pressed"]
