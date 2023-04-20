@@ -13,9 +13,9 @@ public class ItemSpawner : Godot.Timer
     public override void _Ready()
     {
         // Load the Trash scene resource
-        paperTrash = (PackedScene)ResourceLoader.Load("res://Trash/Paper.tscn");
-        glassTrash = (PackedScene)ResourceLoader.Load("res://Trash/Glass.tscn");
-        plasticTrash = (PackedScene)ResourceLoader.Load("res://Trash/Plastic.tscn");
+        paperTrash = (PackedScene)ResourceLoader.Load("res://Trash/Paper/Paper.tscn");
+        glassTrash = (PackedScene)ResourceLoader.Load("res://Trash/Glass/Glass.tscn");
+        plasticTrash = (PackedScene)ResourceLoader.Load("res://Trash/Plastic/Plastic.tscn");
     }
 
  
@@ -53,8 +53,8 @@ public class ItemSpawner : Godot.Timer
             
             
             count++;
-
-            WaitTime = rand.Next(1, 3);
+            
+            WaitTime = rand.Next(2, 4);
         }
       
     }

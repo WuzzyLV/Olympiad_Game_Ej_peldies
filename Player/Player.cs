@@ -31,7 +31,7 @@ public class Player : KinematicBody2D
             Velocity.x += 1;
         }
 
-        GD.Print(Velocity.Normalized());
+       
         if (Velocity == Vector2.Zero)
         {
             AnimationNodeStateMachinePlayback stateMachinePlayback = (AnimationNodeStateMachinePlayback)tree.Get("parameters/playback");

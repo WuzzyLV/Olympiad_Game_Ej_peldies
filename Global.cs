@@ -8,4 +8,6 @@ public class Global : Node
     public bool plastic;
     public bool glass;
     public bool paper;
+    public bool dropped;
+
 }

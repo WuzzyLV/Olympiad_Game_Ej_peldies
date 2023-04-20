@@ -1,14 +1,15 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scoring and Timer/Scoring.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Trash/PaperTrashCan.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Trash/Paper/PaperTrashCan.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Tiles/tilesheet_complete.png" type="Texture" id=3]
+[ext_resource path="res://PickUpStuff.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Area/CollisionChecker.cs" type="Script" id=5]
 [ext_resource path="res://Scoring and Timer/Timer.cs" type="Script" id=7]
 [ext_resource path="res://Area/ItemSpawner.cs" type="Script" id=8]
 [ext_resource path="res://Scenes/GameScene.cs" type="Script" id=9]
-[ext_resource path="res://Trash/GlassCan.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Trash/PlasticTrashCan.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Trash/Glass/GlassCan.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Trash/Plastic/PlasticTrashCan.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Player/player.tscn" type="PackedScene" id=12]
 
 [sub_resource type="TileSet" id=2]
@@ -122,7 +123,7 @@ format = 1
 tile_data = PoolIntArray( -589820, 0, 0, -458765, 0, 0, -458761, 0, 0, -458753, 0, 0, -458741, 0, 0, -262147, 0, 0, -262141, 0, 0, -196602, 0, 0, -65543, 0, 0, -14, 0, 0, 11, 0, 0, 262134, 0, 0, 262154, 0, 0, 393201, 0, 0, 393209, 0, 0, 327681, 0, 0, 327682, 0, 0 )
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( -16, -17 )
+position = Vector2( 0, -104 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -161,7 +162,6 @@ position = Vector2( -106, -249 )
 shape = SubResource( 5 )
 
 [node name="player" parent="." instance=ExtResource( 12 )]
-position = Vector2( 139, 46 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, 3 )
@@ -178,9 +178,9 @@ margin_bottom = -240.0
 
 [node name="Timer" type="RichTextLabel" parent="."]
 margin_left = -36.0
-margin_top = -265.0
+margin_top = -260.0
 margin_right = 52.0
-margin_bottom = -225.0
+margin_bottom = -220.0
 text = "01 : 00 : 00"
 script = ExtResource( 7 )
 
@@ -191,6 +191,14 @@ position = Vector2( -164, 91 )
 position = Vector2( 177, 88 )
 
 [node name="PaperCan" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1, 85 )
+position = Vector2( -1, 90 )
+
+[node name="PickUpStuff" parent="." instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -16.0
+margin_top = -42.0
+margin_right = -16.0
+margin_bottom = -42.0
 
 [connection signal="timeout" from="Area2D/ItemSpawner" to="Area2D/ItemSpawner" method="_on_Timer_timeout"]

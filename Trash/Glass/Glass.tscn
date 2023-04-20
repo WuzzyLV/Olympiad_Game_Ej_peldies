@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Trash/Glass/GlassBottle.png" type="Texture" id=1]
+[ext_resource path="res://Trash/Glass/GlassPickUp.cs" type="Script" id=2]
+[ext_resource path="res://Trash/Glass/GlassSpriteChange.cs" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 19.105
+
+[sub_resource type="Shader" id=6]
+code = "shader_type canvas_item;
+
+uniform vec2 outline_color = vec2(1.0, 0);
+uniform float outline_size = 0;
+
+
+void fragment() {
+    vec4 col = texture(TEXTURE, UV);
+    vec4 outline_col = vec4(outline_color.x, outline_color.y, 1.0, 0);
+
+    float alpha = col.a;
+    float dist = 1.0 - smoothstep(1.0 - outline_size, 1.0, length(UV - vec2(0.5)));
+    col = mix(outline_col, col, alpha);
+    col.a = alpha;
+    col *= dist;
+    
+    COLOR = col;
+}
+"
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 6 )
+shader_param/outline_color = Vector2( 1, 0 )
+shader_param/outline_size = 0.0
+
+[node name="Glass" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 5 )
+scale = Vector2( 1.41667, 1.15385 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_Glass_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Glass_body_exited"]

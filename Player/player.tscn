@@ -1,7 +1,7 @@
 [gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Player/Player.cs" type="Script" id=1]
-[ext_resource path="res://spritesheet.png" type="Texture" id=2]
+[ext_resource path="res://player.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 19, 26.5 )
@@ -320,18 +320,20 @@ start_node = "Idle"
 [node name="player" type="KinematicBody2D"]
 z_index = 1
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 37, -74.5 )
 shape = SubResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 38, -74 )
+position = Vector2( 7.62939e-06, -1.52588e-05 )
 scale = Vector2( 2.87958, 2.64084 )
 texture = ExtResource( 2 )
 hframes = 4
 vframes = 12
-frame = 32
+frame = 35
 region_rect = Rect2( 160, 64, 64, 32 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
