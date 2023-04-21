@@ -21,7 +21,7 @@ public class PlasticTrashCan : Area2D
     {
         TrashGameGlobal g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
 
-        if (!g.plastic)
+        if (!g.picked)
         {
             return;
         }
@@ -32,6 +32,14 @@ public class PlasticTrashCan : Area2D
         if (!Input.IsActionJustPressed("interact"))
 
         {
+            return;
+        }
+        if (Input.IsActionJustPressed("interact") && !g.plastic && g.picked)
+        {
+            g.dropped = true;
+            g.picked = false;
+            g.score--;
+            g.paper = false; g.glass = false;
             return;
         }
         g.picked = false;

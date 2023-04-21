@@ -20,8 +20,8 @@ public class GlassTrashCan : Area2D
     public override void _PhysicsProcess(float delta)
     {
         TrashGameGlobal g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
-        
-        if (!g.glass)
+
+        if (!g.picked)
         {
             return;
         }
@@ -32,6 +32,14 @@ public class GlassTrashCan : Area2D
         if (!Input.IsActionJustPressed("interact"))
 
         {
+            return;
+        }
+        if (Input.IsActionJustPressed("interact") && !g.glass && g.picked)
+        {
+            g.dropped = true;
+            g.picked = false;
+            g.score--;
+            g.plastic = false; g.paper = false;
             return;
         }
         g.picked = false;
