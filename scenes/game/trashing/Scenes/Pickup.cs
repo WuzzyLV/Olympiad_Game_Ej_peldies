@@ -5,12 +5,8 @@ using System.Reflection.Emit;
 public class Pickup : Godot.Label
 {
     float time = 1f, counter = 1;
-    Player player;
-    public override void _Ready()
-    {
-        player = GetNode<Player>("/root/GameScene/player");
-        this.SetPosition (new Vector2(player.Position.x, player.Position.y));
-    }
+   
+  
     public override void _Process(float delta)
     {
 
