@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/game/fishing/PlayerController.cs" type="Script" id=1]
+[ext_resource path="res://scenes/game/fishing/FishAI.cs" type="Script" id=2]
+[ext_resource path="res://scenes/game/fishing/ProgressBar.cs" type="Script" id=3]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 480, 448, 0, 0, 0, 0, 481.172, 291.404, 0, 0, 0, 0, 480, 128 )
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15.4359, 8.6157 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10.5072, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 553.0
+margin_top = 451.0
+margin_right = 911.0
+margin_bottom = 465.0
+rect_rotation = 270.0
+percent_visible = false
+script = ExtResource( 3 )
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 32, 0 )
+curve = SubResource( 1 )
+
+[node name="BooberPath" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 480, 448 )
+rotation = -1.56331
+loop = false
+script = ExtResource( 1 )
+
+[node name="Boober" type="Polygon2D" parent="Path2D/BooberPath"]
+position = Vector2( -16.1183, 29.8632 )
+antialiased = true
+polygon = PoolVector2Array( 11.9278, -22.0392, 43.9277, -22.144, 43.8753, -38.144, 11.8754, -38.0391 )
+
+[node name="Area2D" type="Area2D" parent="Path2D/BooberPath/Boober"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/BooberPath/Boober/Area2D"]
+position = Vector2( 28.6142, -30.4567 )
+shape = SubResource( 3 )
+
+[node name="FishPath" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 480, 448 )
+rotation = -1.56331
+loop = false
+script = ExtResource( 2 )
+
+[node name="Fish" type="Polygon2D" parent="Path2D/FishPath"]
+position = Vector2( 0.00744629, 1.00006 )
+color = Color( 0.164706, 0.482353, 0.368627, 1 )
+polygon = PoolVector2Array( 20.9919, -1.15723, 12.9547, -6.09717, 6.98489, -2.05243, 0.962555, -5.00735, 1.02243, 2.99243, 6.99985, -0.0524902, 13.0221, 2.90259 )
+
+[node name="Area2D" type="Area2D" parent="Path2D/FishPath"]
+position = Vector2( 0.00744629, 1.00006 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/FishPath/Area2D"]
+position = Vector2( 11.4998, -1.00037 )
+shape = SubResource( 2 )
+
+[node name="Top" type="Polygon2D" parent="."]
+position = Vector2( 0, -32 )
+color = Color( 0.552941, 0.0862745, 0.0862745, 1 )
+polygon = PoolVector2Array( 536, 128, 488, 128, 488, 120, 536, 120 )
+__meta__ = {
+"_editor_description_": "
+	"
+}
+
+[node name="Bottom" type="Polygon2D" parent="."]
+position = Vector2( 0, 331 )
+color = Color( 0.552941, 0.0862745, 0.0862745, 1 )
+polygon = PoolVector2Array( 536, 128, 488, 128, 488, 120, 536, 120 )
+__meta__ = {
+"_editor_description_": "
+	"
+}
+
+[connection signal="area_entered" from="Path2D/FishPath/Area2D" to="ProgressBar" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Path2D/FishPath/Area2D" to="ProgressBar" method="_on_Area2D_area_exited"]
