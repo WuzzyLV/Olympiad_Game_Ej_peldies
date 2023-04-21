@@ -12,13 +12,13 @@ public class PlayerController : Godot.PathFollow2D
     [Export]
     public float VelocityCap = 500;
 
-    float curveLen;
+    float _curveLen;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        curveLen= GetParent<Path2D>().Curve.GetBakedLength();
-        GD.Print(curveLen);
+        _curveLen= GetParent<Path2D>().Curve.GetBakedLength();
+        GD.Print(_curveLen);
     }
 
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,43 +26,43 @@ public class PlayerController : Godot.PathFollow2D
     {
         if (Input.IsActionPressed(Key))
         {
-            float lastVel=velocity;
-            addVelocity(Speed);
+            float lastVel=_velocity;
+            AddVelocity(Speed);
         }
         else
         {
-            addVelocity(Speed * -1);
+            AddVelocity(Speed * -1);
         }
-        GD.Print(velocity+":"+Offset);
-        Offset= Offset + velocity * delta;
+        GD.Print(_velocity+":"+Offset);
+        Offset= Offset + _velocity * delta;
     }
 
-    float velocity = 0;
-    void addVelocity(float velocity)
+    float _velocity = 0;
+    void AddVelocity(float velocity)
     {
-        this.velocity += velocity;
+        this._velocity += velocity;
 		
         //If sitting on the bottom dont let it accelarate
         if (Offset <= 0 && velocity < 0)
         {
-            this.velocity = 0;
+            this._velocity = 0;
             return;
         }
         //If you hit the top set vel to 0 cause u cant accelarate in a wall
-        if (Offset >= curveLen && velocity > 0) 
+        if (Offset >= _curveLen && velocity > 0) 
         {
-            this.velocity = 0;
+            this._velocity = 0;
         }
         //If vel cap reached reset to vel cap 
-        if (this.velocity > VelocityCap)
+        if (this._velocity > VelocityCap)
         {
-            this.velocity = VelocityCap;
+            this._velocity = VelocityCap;
             return;
         }
 		
-        if (this.velocity < VelocityCap*-1)
+        if (this._velocity < VelocityCap*-1)
         {
-            this.velocity= VelocityCap*-1;
+            this._velocity= VelocityCap*-1;
             return;
         }
     }
