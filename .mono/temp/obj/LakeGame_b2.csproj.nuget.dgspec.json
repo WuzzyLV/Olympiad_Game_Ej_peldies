@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Godot_v3.5.2-stable_mono_win64\\Projects\\LakeGame_b2\\LakeGame_b2.csproj": {}
+    "C:\\Users\\ss\\Desktop\\LakeGameMain\\LakeGame_b2.csproj": {}
   },
   "projects": {
-    "D:\\Godot_v3.5.2-stable_mono_win64\\Projects\\LakeGame_b2\\LakeGame_b2.csproj": {
+    "C:\\Users\\ss\\Desktop\\LakeGameMain\\LakeGame_b2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Godot_v3.5.2-stable_mono_win64\\Projects\\LakeGame_b2\\LakeGame_b2.csproj",
+        "projectUniqueName": "C:\\Users\\ss\\Desktop\\LakeGameMain\\LakeGame_b2.csproj",
         "projectName": "LakeGame_b2",
-        "projectPath": "D:\\Godot_v3.5.2-stable_mono_win64\\Projects\\LakeGame_b2\\LakeGame_b2.csproj",
-        "packagesPath": "C:\\Users\\Reinis\\.nuget\\packages\\",
-        "outputPath": "D:\\Godot_v3.5.2-stable_mono_win64\\Projects\\LakeGame_b2\\.mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\ss\\Desktop\\LakeGameMain\\LakeGame_b2.csproj",
+        "packagesPath": "C:\\Users\\ss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ss\\Desktop\\LakeGameMain\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Reinis\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,15 +39,7 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "dependencies": {
-            "Microsoft.NETFramework.ReferenceAssemblies": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.0.2, )",
-              "autoReferenced": true
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

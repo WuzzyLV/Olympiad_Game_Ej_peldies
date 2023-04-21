@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/objects/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://debug/FishingButton.cs" type="Script" id=2]
+[ext_resource path="res://debug/Button2.cs" type="Script" id=3]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 107, 8 )
@@ -12,10 +13,20 @@ position = Vector2( -233, 357 )
 [node name="Button" type="Button" parent="."]
 margin_left = -117.0
 margin_top = 147.0
-margin_right = -105.0
+margin_right = -63.0
 margin_bottom = 167.0
 rect_scale = Vector2( 1.8106, 1.57564 )
 text = "fishing"
 script = ExtResource( 2 )
 
+[node name="Button2" type="Button" parent="."]
+margin_left = -116.0
+margin_top = 193.0
+margin_right = -62.0
+margin_bottom = 213.0
+rect_scale = Vector2( 1.8106, 1.57564 )
+text = "trashing"
+script = ExtResource( 3 )
+
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_Button_pressed"]
