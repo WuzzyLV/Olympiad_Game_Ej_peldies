@@ -30,7 +30,7 @@ public class GlassPickUp : Area2D
         {
             return;
         }
-        if (!Input.IsActionJustPressed("ui_pickup"))
+        if (!Input.IsActionJustPressed("interact"))
         {
             return;
         }

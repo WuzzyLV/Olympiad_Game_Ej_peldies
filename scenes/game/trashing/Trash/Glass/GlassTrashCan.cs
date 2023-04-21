@@ -29,7 +29,7 @@ public class GlassTrashCan : Area2D
         {
             return;
         }
-        if (!Input.IsActionJustPressed("ui_drop"))
+        if (!Input.IsActionJustPressed("interact"))
 
         {
             return;
