@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/objects/player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/FishingButton.cs" type="Script" id=2]
+[ext_resource path="res://debug/FishingButton.cs" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 107, 8 )
@@ -14,7 +14,7 @@ margin_left = -117.0
 margin_top = 147.0
 margin_right = -105.0
 margin_bottom = 167.0
-rect_scale = Vector2( 1.8002, 1.57564 )
+rect_scale = Vector2( 1.8106, 1.57564 )
 text = "fishing"
 script = ExtResource( 2 )
 
