@@ -9,13 +9,7 @@ public class TrashGameGlobal : Node
     public bool glass;
     public bool paper;
     public bool dropped;
-    public float timePlayed =0f;
 
 
-
-    public override void _PhysicsProcess(float delta)
-    {
-        timePlayed += delta;
-    }
 
 }

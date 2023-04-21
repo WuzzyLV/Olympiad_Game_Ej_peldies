@@ -5,7 +5,7 @@ using System.Management.Instrumentation;
 public class Score : Node
 {
     
-    private static int _score= 0; 
+    private static int _score= 0;
     public static int GetScore()
     {
         return _score;

@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Reflection.Emit;
 
-public class Pickup : Godot.RichTextLabel
+public class Pickup : Godot.Label
 {
     float time = 1f, counter = 1;
     Player player;
@@ -16,8 +16,7 @@ public class Pickup : Godot.RichTextLabel
 
 
         TrashGameGlobal g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
-        player = GetNode<Player>("/root/GameScene/player");
-        this.SetPosition (new Vector2(player.Position.x, player.Position.y));
+        
         if(!g.plastic && !g.paper && !g.glass && !g.dropped)
         {
             Text = "";
@@ -45,7 +44,7 @@ public class Pickup : Godot.RichTextLabel
 
         if(g.dropped)
         {
-            Text = "Item dropped";
+            Text = "-1 Item";
             time -= delta;
             counter -= delta;
             if (counter <= 0 || g.picked)

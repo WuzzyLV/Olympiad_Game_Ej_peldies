@@ -9,5 +9,11 @@ public class GameScene : Node2D
        GD.Print(GetPath());
     }
 
+    public override void _Process(float delta)
+    {
+        TrashGameGlobal g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
+        GD.Print(g.score);
+    }
+
 
 }
