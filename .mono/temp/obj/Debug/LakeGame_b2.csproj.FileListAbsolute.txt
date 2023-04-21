@@ -1,0 +1,9 @@
+D:\Godot_v3.5.2-stable_mono_win64\Projects\LakeGame_b2\.mono\temp\obj\Debug\LakeGame_b2.csproj.AssemblyReference.cache
+D:\Godot_v3.5.2-stable_mono_win64\Projects\LakeGame_b2\.mono\temp\obj\Debug\LakeGame_b2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Godot_v3.5.2-stable_mono_win64\Projects\LakeGame_b2\.mono\temp\obj\Debug\LakeGame_b2.AssemblyInfoInputs.cache
+D:\Godot_v3.5.2-stable_mono_win64\Projects\LakeGame_b2\.mono\temp\obj\Debug\LakeGame_b2.AssemblyInfo.cs
+D:\Godot_v3.5.2-stable_mono_win64\Projects\LakeGame_b2\.mono\temp\obj\Debug\LakeGame_b2.csproj.CoreCompileInputs.cache
+D:\Godot_v3.5.2-stable_mono_win64\Projects\LakeGame_b2\.mono\temp\bin\Debug\LakeGame_b2.dll
+D:\Godot_v3.5.2-stable_mono_win64\Projects\LakeGame_b2\.mono\temp\bin\Debug\LakeGame_b2.pdb
+D:\Godot_v3.5.2-stable_mono_win64\Projects\LakeGame_b2\.mono\temp\obj\Debug\LakeGame_b2.dll
+D:\Godot_v3.5.2-stable_mono_win64\Projects\LakeGame_b2\.mono\temp\obj\Debug\LakeGame_b2.pdb

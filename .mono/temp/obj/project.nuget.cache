@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "m3JDzzgz59JGP9AL3SyX/Bvp7ytCvj2+e6eefR6FXa/TjXlJFdbt44OozcJ9yGakro1OM/GNCHWdns7wMyAwiQ==",
+  "success": true,
+  "projectFilePath": "D:\\Godot_v3.5.2-stable_mono_win64\\Projects\\LakeGame_b2\\LakeGame_b2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Reinis\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "C:\\Users\\Reinis\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.2\\microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
