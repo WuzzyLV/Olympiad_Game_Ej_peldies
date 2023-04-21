@@ -18,7 +18,7 @@ public class PaperTrashCan : Area2D
 
     public override void _PhysicsProcess(float delta)
     {
-        Global g = GetNode<Global>("/root/Global");
+        TrashGameGlobal g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
         if (!g.paper)
         {
             return;

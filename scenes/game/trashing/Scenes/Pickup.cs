@@ -13,9 +13,9 @@ public class Pickup : Godot.RichTextLabel
     }
     public override void _Process(float delta)
     {
-       
-       
-        Global g = GetNode<Global>("/root/Global");
+
+
+        TrashGameGlobal g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
         player = GetNode<Player>("/root/GameScene/player");
         this.SetPosition (new Vector2(player.Position.x, player.Position.y));
         if(!g.plastic && !g.paper && !g.glass && !g.dropped)

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Global : Node
+public class TrashGameGlobal : Node
 {
     public int score = 0, testScore = 0;
     public bool picked = false;

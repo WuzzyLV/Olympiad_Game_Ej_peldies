@@ -18,7 +18,6 @@ public class Player : KinematicBody2D
     public override void _PhysicsProcess(float delta)
     {
         Vector2 velocity = Vector2.Zero;
-        
         if (Input.IsActionPressed("ui_up"))
         {
             velocity.y -= 1;

@@ -15,6 +15,7 @@ default_font = SubResource( 1 )
 [node name="GameOverScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_scale = Vector2( 1.7207, 1.37893 )
 theme = SubResource( 2 )
 script = ExtResource( 3 )
 

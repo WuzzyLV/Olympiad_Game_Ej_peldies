@@ -1,15 +1,14 @@
 using Godot;
 using System;
 
-public class Score : RichTextLabel
+public class Scoring : RichTextLabel
 {
 
 
    public override void _PhysicsProcess(float delta)
     {
-        Global g = GetNode<Global>("/root/Global");
-        Text = "Score: " + g.score;
-
+        Score score = GetNode<Score>("res://src/Score");
+        
     }
     
     

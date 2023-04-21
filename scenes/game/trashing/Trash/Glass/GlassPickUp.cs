@@ -20,7 +20,7 @@ public class GlassPickUp : Area2D
     {
         ItemSpawner itemSpawner = GetNode<ItemSpawner>("/root/GameScene/Area2D/ItemSpawner");
 
-        Global g = GetNode<Global>("/root/Global");
+        TrashGameGlobal g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
 
         if (g.picked)
         {
