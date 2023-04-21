@@ -348,7 +348,7 @@ scale = Vector2( 2.87958, 2.64084 )
 texture = ExtResource( 2 )
 hframes = 4
 vframes = 12
-frame = 33
+frame = 32
 region_rect = Rect2( 160, 64, 64, 32 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
