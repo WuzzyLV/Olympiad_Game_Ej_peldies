@@ -14,14 +14,14 @@ public class Boat : KinematicBody2D
     public override void _PhysicsProcess(float delta)
     {
         Vector2 velocity = Vector2.Zero;
-        /*if (Input.IsActionPressed("ui_up"))
+        if (Input.IsActionPressed("ui_up"))
         {
             velocity.y -= 1;
         }
         if (Input.IsActionPressed("ui_down"))
         {
             velocity.y += 1;
-        }*/
+        }
         if (Input.IsActionPressed("ui_left"))
         {
             velocity.x -= 1;
@@ -32,10 +32,10 @@ public class Boat : KinematicBody2D
         }
         
         //velocity.y -= 1;
-        velocity = velocity.Normalized();
-        //velocity.y *= 5;
+       // velocity = velocity.Normalized();
+      
         //velocity.x *= 500;
-        MoveAndSlide(velocity * Speed);
+        MoveAndSlide(velocity.Normalized() * Speed);
         //Position = GetViewport().GetMousePosition();
       
        
