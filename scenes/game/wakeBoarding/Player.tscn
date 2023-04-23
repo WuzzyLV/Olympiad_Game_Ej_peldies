@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/game/wakeBoarding/Boat.cs" type="Script" id=1]
-[ext_resource path="res://assets/trash/Paper/Paper.png" type="Texture" id=2]
+[ext_resource path="res://assets/objects/board.png" type="Texture" id=2]
 [ext_resource path="res://scenes/game/wakeBoarding/Yes.cs" type="Script" id=3]
-[ext_resource path="res://assets/trash/Glass/GlassTrashCan.png" type="Texture" id=4]
+[ext_resource path="res://assets/objects/boat.png" type="Texture" id=4]
 [ext_resource path="res://scenes/game/wakeBoarding/Line.cs" type="Script" id=5]
 [ext_resource path="res://scenes/game/wakeBoarding/Sprite.cs" type="Script" id=6]
 [ext_resource path="res://scenes/game/wakeBoarding/CollisionChecker.cs" type="Script" id=7]
+[ext_resource path="res://assets/objects/playerTop.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 9.75, 8.75 )
@@ -25,9 +26,9 @@ extents = Vector2( 11, 14.5 )
 [node name="Boat" type="KinematicBody2D" parent="."]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Boat"]
+[node name="Boat" type="Sprite" parent="Boat"]
 position = Vector2( -0.5, 0 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="Boat"]
 position = Vector2( -0.5, 0 )
@@ -44,6 +45,13 @@ shape = SubResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boat"]
 shape = SubResource( 4 )
 
+[node name="Line2D" type="Line2D" parent="."]
+width = 1.0
+default_color = Color( 0.0941176, 0.282353, 0.854902, 1 )
+texture_mode = 2
+antialiased = true
+script = ExtResource( 5 )
+
 [node name="WakeBoard" type="RigidBody2D" parent="."]
 position = Vector2( 0, 72 )
 scale = Vector2( 1.00462, 0.922621 )
@@ -53,8 +61,8 @@ script = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WakeBoard"]
 shape = SubResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="WakeBoard"]
-texture = ExtResource( 4 )
+[node name="Board" type="Sprite" parent="WakeBoard"]
+texture = ExtResource( 2 )
 script = ExtResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="WakeBoard"]
@@ -63,6 +71,9 @@ script = ExtResource( 7 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WakeBoard/Area2D"]
 position = Vector2( 0, 0.5 )
 shape = SubResource( 5 )
+
+[node name="Player" type="Sprite" parent="WakeBoard"]
+texture = ExtResource( 8 )
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
 position = Vector2( 0, -5.14415 )
@@ -73,13 +84,6 @@ bias = 0.787
 length = 84.0
 rest_length = 84.0
 stiffness = 64.0
-
-[node name="Line2D" type="Line2D" parent="."]
-width = 1.0
-default_color = Color( 0.0941176, 0.282353, 0.854902, 1 )
-texture_mode = 2
-antialiased = true
-script = ExtResource( 5 )
 
 [connection signal="body_entered" from="Boat/Area2D" to="Boat/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="WakeBoard/Area2D" to="WakeBoard/Area2D" method="_on_Area2D_body_entered"]
