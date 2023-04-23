@@ -37,6 +37,7 @@ margin_left = -45.0
 margin_top = -31.5
 margin_right = 45.0
 margin_bottom = 31.5
+rect_scale = Vector2( 1.00398, 1 )
 
 [node name="Restart" type="Button" parent="VBoxContainer"]
 margin_right = 90.0

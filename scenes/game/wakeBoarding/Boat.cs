@@ -1,13 +1,9 @@
 using Godot;
 using System;
 
-public class Boat : StaticBody2D
+public class Boat : KinematicBody2D
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
-
-    // Called when the node enters the scene tree for the first time.
+   
     public override void _Ready()
     {
         
@@ -32,9 +28,15 @@ public class Boat : StaticBody2D
         {
             velocity.x += 1;
         }
-
-        velocity.y -= 1;
-        Position += velocity.Normalized() * 100 * delta;
+        
+       // velocity.y -= 1;
+        velocity = velocity.Normalized();
+       //velocity.y *= 50;
+       // velocity.x *= 500;
+        MoveAndSlide(velocity * 35);
         //Position = GetViewport().GetMousePosition();
+       
     }
+
+    
 }
