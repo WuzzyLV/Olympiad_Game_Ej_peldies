@@ -29,11 +29,11 @@ public class Boat : KinematicBody2D
             velocity.x += 1;
         }
         
-       // velocity.y -= 1;
+        //velocity.y -= 1;
         velocity = velocity.Normalized();
-       // velocity.y *= 5;
+        //velocity.y *= 5;
         //velocity.x *= 500;
-        MoveAndSlide(velocity * 35);
+        MoveAndSlide(velocity * 40);
         //Position = GetViewport().GetMousePosition();
       
        

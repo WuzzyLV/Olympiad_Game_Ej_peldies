@@ -4,14 +4,14 @@ using System;
 public class Line : Line2D
 {
     Boat boat;
-    Sprite yes;
-   /* public override void _Ready()
+    Yes yes;
+    public override void _Ready()
     {
-        boat = GetNode<Boat>("/root/Player/Boat2");
-        yes = GetNode<Sprite>("/root/Player/Yes/Sprite");
-        *//* Points = new Vector2[] { boat.Position, yes.Position };
-         DefaultColor = Colors.Red;
-         Width = 3;*//*
+        boat = GetNode<Boat>("/root/Node2D/Player/Boat");
+        yes = GetNode<Yes>("/root/Node2D/Player/WakeBoard");
+        Points = new Vector2[] { boat.Position, yes.Position };
+         DefaultColor = Colors.Black;
+         Width = 1;
 
 
     }
@@ -23,16 +23,8 @@ public class Line : Line2D
         Vector2[] points = { boat.Position, yes.Position };
         Points = points;
 
-       
-        float distance = boat.Position.DistanceTo(yes.Position);
-         
-        if (distance > 0)
-        {
-            Vector2 direction = (yes.Position - boat.Position).Normalized();
-            yes.Position = boat.Position + direction * distance;
-        }
 
-    }*/
+    }
    
 
 }
