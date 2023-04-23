@@ -19,6 +19,14 @@ config/icon="res://icon.png"
 TrashGameGlobal="*res://TrashGameGlobal.cs"
 Score="*res://src/Score.cs"
 
+[display]
+
+window/stretch/mode="2d"
+
+[global]
+
+stretc=false
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

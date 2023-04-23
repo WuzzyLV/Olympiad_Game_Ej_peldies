@@ -46,6 +46,8 @@ shape = SubResource( 4 )
 
 [node name="WakeBoard" type="RigidBody2D" parent="."]
 position = Vector2( 0, 72 )
+scale = Vector2( 1.00462, 0.922621 )
+linear_damp = 1.0
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WakeBoard"]
@@ -67,9 +69,10 @@ position = Vector2( 0, -5.14415 )
 scale = Vector2( 1, 0.936937 )
 node_a = NodePath("../Boat")
 node_b = NodePath("../WakeBoard")
+bias = 0.787
 length = 84.0
+rest_length = 84.0
 stiffness = 64.0
-damping = 0.5
 
 [node name="Line2D" type="Line2D" parent="."]
 width = 1.0

@@ -4,6 +4,8 @@ using System;
 public class Boat : KinematicBody2D
 {
    
+    [Export]
+    public float Speed = 80;
     public override void _Ready()
     {
         
@@ -33,7 +35,7 @@ public class Boat : KinematicBody2D
         velocity = velocity.Normalized();
         //velocity.y *= 5;
         //velocity.x *= 500;
-        MoveAndSlide(velocity * 40);
+        MoveAndSlide(velocity * Speed);
         //Position = GetViewport().GetMousePosition();
       
        
