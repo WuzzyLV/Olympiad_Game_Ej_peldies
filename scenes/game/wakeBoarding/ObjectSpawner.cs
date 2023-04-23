@@ -28,4 +28,11 @@ public class ObjectSpawner : Godot.Timer
             WaitTime = rand.Next(1, 3);
             
     }
+    float time;
+    public override void _PhysicsProcess(float delta)
+    {
+        time += delta;
+        GD.Print((int)time);
+
+    }
 }

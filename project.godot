@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 TrashGameGlobal="*res://TrashGameGlobal.cs"
+Score="*res://src/Score.cs"
 
 [gui]
 

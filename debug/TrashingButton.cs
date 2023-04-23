@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Button2 : Button
+public class TrashingButton : Button
 {
     public void _on_Button2_pressed()
     {

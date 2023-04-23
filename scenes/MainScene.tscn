@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/objects/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://debug/FishingButton.cs" type="Script" id=2]
-[ext_resource path="res://debug/Button2.cs" type="Script" id=3]
+[ext_resource path="res://debug/TrashingButton.cs" type="Script" id=3]
 [ext_resource path="res://debug/ScoreLabel.cs" type="Script" id=4]
+[ext_resource path="res://debug/WakeboardButton.cs" type="Script" id=5]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 107, 8 )
@@ -21,11 +22,12 @@ text = "fishing"
 script = ExtResource( 2 )
 
 [node name="Button2" type="Button" parent="."]
-margin_left = -116.0
+margin_left = -82.0
 margin_top = 193.0
-margin_right = -62.0
+margin_right = -19.0
 margin_bottom = 213.0
 rect_scale = Vector2( 1.8106, 1.57564 )
+rect_pivot_offset = Vector2( 45.2889, 10.1546 )
 text = "trashing"
 script = ExtResource( 3 )
 
@@ -36,5 +38,14 @@ margin_right = -304.0
 margin_bottom = 267.0
 script = ExtResource( 4 )
 
+[node name="Button3" type="Button" parent="."]
+margin_left = -114.0
+margin_top = 231.0
+margin_right = -7.0
+margin_bottom = 275.0
+text = "Wakeboard"
+script = ExtResource( 5 )
+
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_Button3_pressed"]
