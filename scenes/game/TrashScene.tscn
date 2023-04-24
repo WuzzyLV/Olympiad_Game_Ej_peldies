@@ -162,7 +162,7 @@ position = Vector2( 109, 5 )
 scale = Vector2( 2, 2 )
 
 [node name="Tree" parent="." instance=ExtResource( 14 )]
-position = Vector2( -252, -74 )
+position = Vector2( -260, -71 )
 scale = Vector2( 2, 2 )
 z_index = 3
 
