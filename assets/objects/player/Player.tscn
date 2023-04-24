@@ -327,6 +327,15 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 10 )
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 7.62939e-06, -1.52588e-05 )
+scale = Vector2( 2.87958, 2.64084 )
+texture = ExtResource( 2 )
+hframes = 4
+vframes = 12
+frame = 32
+region_rect = Rect2( 160, 64, 64, 32 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 11 )
 anims/idle = SubResource( 12 )
@@ -342,15 +351,6 @@ anims/walk_up = SubResource( 28 )
 anims/walk_upleft = SubResource( 33 )
 anims/walk_upright = SubResource( 43 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 7.62939e-06, -1.52588e-05 )
-scale = Vector2( 2.87958, 2.64084 )
-texture = ExtResource( 2 )
-hframes = 4
-vframes = 12
-frame = 32
-region_rect = Rect2( 160, 64, 64, 32 )
-
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 21 )
 anim_player = NodePath("../AnimationPlayer")
@@ -358,7 +358,3 @@ active = true
 parameters/playback = SubResource( 22 )
 parameters/Idle/blend_position = Vector2( -0.0264386, 0.439655 )
 parameters/Walk/blend_position = Vector2( -0.437014, 0.5 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-smoothing_enabled = true
