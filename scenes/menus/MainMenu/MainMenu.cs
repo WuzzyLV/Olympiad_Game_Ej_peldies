@@ -5,7 +5,7 @@ public class MainMenu : Control
 {
     public void _on_Start_pressed()
     {
-        GetTree().ChangeScene("res://scenes/MainScene.tscn");
+        GetTree().ChangeScene("res://scenes/menus/MapScene.tscn");
     }
 
     public void _on_About_game_pressed()
