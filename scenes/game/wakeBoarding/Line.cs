@@ -4,12 +4,12 @@ using System;
 public class Line : Line2D
 {
     Boat boat;
-    Yes yes;
+    Wakeboard wakeboard;
     public override void _Ready()
     {
         boat = GetNode<Boat>("/root/Node2D/Player/Boat");
-        yes = GetNode<Yes>("/root/Node2D/Player/WakeBoard");
-        Points = new Vector2[] { boat.Position, yes.Position };
+        wakeboard = GetNode<Wakeboard>("/root/Node2D/Player/WakeBoard");
+        Points = new Vector2[] { boat.Position, wakeboard.Position };
          DefaultColor = Colors.Black;
          Width = 1;
 
@@ -20,7 +20,7 @@ public class Line : Line2D
     {
      
     
-        Vector2[] points = { boat.Position, yes.Position };
+        Vector2[] points = { boat.Position, wakeboard.Position };
         Points = points;
 
 
