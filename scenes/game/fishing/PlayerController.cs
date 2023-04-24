@@ -26,7 +26,6 @@ public class PlayerController : Godot.PathFollow2D
     {
         if (Input.IsActionPressed(Key))
         {
-            float lastVel=_velocity;
             AddVelocity(Speed);
         }
         else
@@ -34,13 +33,13 @@ public class PlayerController : Godot.PathFollow2D
             AddVelocity(Speed * -1);
         }
         GD.Print(_velocity+":"+Offset);
-        Offset= Offset + _velocity * delta;
+        Offset+= + _velocity * delta;
     }
 
     float _velocity = 0;
     void AddVelocity(float velocity)
     {
-        this._velocity += velocity;
+        _velocity += velocity;
 		
         //If sitting on the bottom dont let it accelarate
         if (Offset <= 0 && velocity < 0)

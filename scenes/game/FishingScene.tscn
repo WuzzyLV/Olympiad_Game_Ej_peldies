@@ -23,6 +23,7 @@ margin_top = 451.0
 margin_right = 911.0
 margin_bottom = 465.0
 rect_rotation = 270.0
+max_value = 10.0
 percent_visible = false
 script = ExtResource( 3 )
 

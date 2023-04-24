@@ -3,6 +3,8 @@ using System;
 
 public class ProgressBar : Godot.ProgressBar
 {
+    
+    [Export] public float AddedAmount = 1f;
     private bool isColliding = false;
 
     // Called when the node enters the scene tree for the first time.
@@ -15,11 +17,11 @@ public class ProgressBar : Godot.ProgressBar
     {
         if (isColliding)
         {
-            Value += 0.1f;
+            Value += AddedAmount*delta;
         }
         else
         {
-            Value -= 0.1f;
+            Value -= AddedAmount*delta;
         }
     }
 

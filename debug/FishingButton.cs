@@ -15,6 +15,6 @@ public class FishingButton : Button
 
 	public void _on_Button_pressed()
 	{
-		GetTree().ChangeScene("res://scenes/game/Fishing.tscn");
+		GetTree().ChangeScene("res://scenes/game/FishingScene.tscn");
 	}
 }
