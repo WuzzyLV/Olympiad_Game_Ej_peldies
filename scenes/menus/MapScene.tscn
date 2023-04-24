@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/fonts/consola.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/game/map/LocationButton.cs" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://scenes/game/map/ziplineIcon.png" type="Texture" id=4]
 [ext_resource path="res://scenes/game/map/Map.png" type="Texture" id=5]
 [ext_resource path="res://scenes/game/map/Beachicon.png" type="Texture" id=6]
+[ext_resource path="res://scenes/game/map/ScoreLabelMap.cs" type="Script" id=7]
+[ext_resource path="res://assets/fonts/dynamicfont_regular.tres" type="DynamicFont" id=8]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0.164706 )
@@ -22,11 +24,11 @@ corner_radius_bottom_left = 45
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=9]
 font_data = ExtResource( 1 )
 
 [sub_resource type="Theme" id=8]
-default_font = SubResource( 7 )
+default_font = SubResource( 9 )
 
 [sub_resource type="StyleBoxFlat" id=6]
 border_width_left = 5
@@ -142,6 +144,15 @@ bbcode_text = "[center]Liepajas ezers[/center],
 Liepājas ezers, kas ir aptuveni 16 km garš un aptuveni 3 km plats, tā dziļums var sasniegt līdz 13 metriem. Ezers ir populārs makšķerēšanas galamērķis, kā arī tajā ir iespējams dažāadas ūdens aktivitātes."
 text = "Liepajas ezers,
 Liepājas ezers, kas ir aptuveni 16 km garš un aptuveni 3 km plats, tā dziļums var sasniegt līdz 13 metriem. Ezers ir populārs makšķerēšanas galamērķis, kā arī tajā ir iespējams dažāadas ūdens aktivitātes."
+
+[node name="Label" type="Label" parent="."]
+margin_left = 35.0
+margin_top = 53.0
+margin_right = 107.0
+margin_bottom = 76.0
+rect_scale = Vector2( 2.60789, 2.60789 )
+custom_fonts/font = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [connection signal="mouse_entered" from="Beach" to="Beach" method="MouseEntered"]
 [connection signal="mouse_exited" from="Beach" to="Beach" method="MouseExited"]

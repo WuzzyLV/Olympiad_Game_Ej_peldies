@@ -3,6 +3,7 @@ using System;
 
 public class TestRootNode : Node2D
 {
+    [Export] public String ReturnScene = "res://scenes/menus/MapScene.tscn";
     [Export] public int Health = 2;
     [Export] public String Question = "What is the capital of Canada?";
     /*
@@ -59,8 +60,7 @@ public class TestRootNode : Node2D
 
     public void RightAnswer()
     {
-        GD.Print("Game Won");
-        //send to somewhere
+        _GameEndProcedure(ReturnScene);
     }
 
     public void WrongAnswer()
@@ -70,8 +70,14 @@ public class TestRootNode : Node2D
         if (Health <= 0)
         {
             _gameOver = true;
-            GD.Print("Game Over");
+            _GameEndProcedure(ReturnScene);
         }
+    }
+    
+    private void _GameEndProcedure(String scene)
+    {
+        Score.AddScore(100*Health);
+        GetTree().ChangeScene(scene);
     }
     
     private void UpdateHealthLabel()

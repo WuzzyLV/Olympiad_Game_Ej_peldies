@@ -3,10 +3,23 @@
 [ext_resource path="res://debug/WakeboardButton.cs" type="Script" id=1]
 [ext_resource path="res://debug/FishingButton.cs" type="Script" id=2]
 [ext_resource path="res://debug/TrashingButton.cs" type="Script" id=3]
-[ext_resource path="res://scenes/Button4.cs" type="Script" id=4]
 [ext_resource path="res://debug/ScoreLabel.cs" type="Script" id=5]
 [ext_resource path="res://assets/objects/map.png" type="Texture" id=6]
 [ext_resource path="res://assets/objects/player/Player.tscn" type="PackedScene" id=7]
+
+[sub_resource type="CSharpScript" id=1]
+script/source = "using Godot;
+using System;
+
+public class Button4 : Button
+{
+
+private void _on_Button4_pressed()
+{
+	GetTree().ChangeScene(\"res://scenes/game/Beberlini.tscn\");
+}
+}
+"
 
 [node name="Node2D2" type="Node2D"]
 position = Vector2( 107, 8 )
@@ -58,7 +71,7 @@ margin_left = -268.0
 margin_top = 87.0
 margin_right = -211.0
 margin_bottom = 133.0
-script = ExtResource( 4 )
+script = SubResource( 1 )
 
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]
