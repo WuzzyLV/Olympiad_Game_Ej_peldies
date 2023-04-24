@@ -1,4 +1,4 @@
-using Godot;
+﻿using Godot;
 using System;
 using System.Reflection.Emit;
 
@@ -22,17 +22,17 @@ public class Pickup : Godot.Label
 
         if (g.plastic)
         {
-            Text = "+1 Plastic";
+            Text = "+1 Plastmass";
             time -= delta;
         }
         if (g.paper)
         {
-            Text = "+1 Paper";
+            Text = "+1 Papīrs";
             time -= delta;
         }
         if (g.glass)
         {
-            Text = "+1 Glass";
+            Text = "+1 Stikls";
             time -= delta;
         }
 
@@ -40,7 +40,7 @@ public class Pickup : Godot.Label
 
         if(g.dropped)
         {
-            Text = "-1 Item";
+            Text = "-1 Lieta";
             time -= delta;
             counter -= delta;
             if (counter <= 0 || g.picked)

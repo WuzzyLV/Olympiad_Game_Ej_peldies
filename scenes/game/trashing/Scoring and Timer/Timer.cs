@@ -11,7 +11,8 @@ public class Timer : RichTextLabel
     private string timeString;
 
     public override void _Process(float delta)
-    {
+    { 
+        
         timeElapsed -= delta;
         minutes = Mathf.FloorToInt(timeElapsed / 60);
         seconds = Mathf.FloorToInt(timeElapsed % 60);

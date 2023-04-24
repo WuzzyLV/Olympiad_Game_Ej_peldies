@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Object : KinematicBody2D
+public class Log : KinematicBody2D
 { 
     private int speed= 75;
     public override void _PhysicsProcess(float delta)
