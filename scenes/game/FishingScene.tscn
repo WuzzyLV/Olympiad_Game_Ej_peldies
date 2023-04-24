@@ -15,7 +15,7 @@ extents = Vector2( 15.4359, 8.6157 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10.5072, 10 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 margin_left = 553.0
