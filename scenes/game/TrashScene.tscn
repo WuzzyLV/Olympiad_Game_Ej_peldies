@@ -117,14 +117,14 @@ position = Vector2( -106, -249 )
 shape = SubResource( 5 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-Speed = 400.0
+Speed = 200.0
 
 [node name="PickUpStuff" parent="player" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1.0
+margin_left = -23.0
 margin_top = -37.0
-margin_right = 1.0
+margin_right = -23.0
 margin_bottom = -37.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
