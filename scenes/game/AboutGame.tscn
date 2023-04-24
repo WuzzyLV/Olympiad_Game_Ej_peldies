@@ -1,0 +1,189 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://assets/Theme/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Main menu assets/TitleScreen.png" type="Texture" id=2]
+[ext_resource path="res://assets/Main menu assets/Keyboard_Letters_and_Symbols.png" type="Texture" id=3]
+[ext_resource path="res://scenes/MainMenu and AboutGame/AboutGame.cs" type="Script" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 64, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 96, 64, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 64, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 32, 16, 16 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 4 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_left = -1.0
+margin_top = -3.0
+margin_right = 1023.0
+margin_bottom = 599.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Arrows" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -216.0
+margin_right = 128.0
+margin_bottom = -152.0
+texture = SubResource( 1 )
+stretch_mode = 1
+
+[node name="W" type="TextureRect" parent="."]
+margin_left = 384.0
+margin_top = 133.0
+margin_right = 448.0
+margin_bottom = 197.0
+texture = SubResource( 2 )
+stretch_mode = 1
+
+[node name="A" type="TextureRect" parent="."]
+margin_left = 512.0
+margin_top = 133.0
+margin_right = 576.0
+margin_bottom = 197.0
+texture = SubResource( 3 )
+stretch_mode = 1
+
+[node name="S" type="TextureRect" parent="."]
+margin_left = 448.0
+margin_top = 133.0
+margin_right = 512.0
+margin_bottom = 197.0
+texture = SubResource( 4 )
+stretch_mode = 1
+
+[node name="D" type="TextureRect" parent="."]
+margin_left = 576.0
+margin_top = 133.0
+margin_right = 640.0
+margin_bottom = 197.0
+texture = SubResource( 5 )
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 491.0
+margin_top = 192.0
+margin_right = 531.0
+margin_bottom = 232.0
+
+[node name="Staigāšana" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.5
+margin_top = -242.5
+margin_right = 72.5
+margin_bottom = -205.5
+text = "Staigāšana"
+align = 1
+valign = 1
+
+[node name="Interakcija" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -86.5
+margin_top = -102.5
+margin_right = 86.5
+margin_bottom = -75.5
+text = "Interakcija"
+align = 1
+valign = 1
+
+[node name="E" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -88.0
+margin_right = 32.0
+margin_bottom = -24.0
+texture = SubResource( 6 )
+stretch_mode = 1
+
+[node name="Back" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 4.5
+margin_top = 93.0
+margin_right = 91.5
+margin_bottom = 115.0
+custom_colors/font_color_hover = Color( 0.462745, 0.72549, 0, 1 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+text = "Atpakaļ"
+
+[node name="Start" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -91.5
+margin_top = 93.0
+margin_right = -4.5
+margin_bottom = 115.0
+custom_colors/font_color_hover = Color( 0.462745, 0.72549, 0, 1 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/focus = SubResource( 14 )
+custom_styles/disabled = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+text = "Sākt"
+
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
