@@ -21,7 +21,7 @@ public class ObjectSpawner : Godot.Timer
             GD.Print("test");
             object1.Position = new Vector2(rand.Next(-100, 100), -300);
             GD.Print(height);
-            int randNum = rand.Next(0, 3);
+            
 
             AddChild(object1);
 

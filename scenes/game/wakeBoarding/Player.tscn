@@ -24,15 +24,13 @@ extents = Vector2( 11, 14.5 )
 [node name="Player" type="Node2D"]
 
 [node name="Boat" type="KinematicBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 1 )
 
 [node name="Boat" type="Sprite" parent="Boat"]
 position = Vector2( -0.5, 0 )
 texture = ExtResource( 4 )
-
-[node name="Camera2D" type="Camera2D" parent="Boat"]
-position = Vector2( -0.5, 0 )
-current = true
 
 [node name="Area2D" type="Area2D" parent="Boat"]
 position = Vector2( 0, -43 )
@@ -55,6 +53,8 @@ script = ExtResource( 5 )
 [node name="WakeBoard" type="RigidBody2D" parent="."]
 position = Vector2( 0, 72 )
 scale = Vector2( 1.00462, 0.922621 )
+collision_layer = 3
+collision_mask = 3
 linear_damp = 1.0
 script = ExtResource( 3 )
 
@@ -85,5 +85,19 @@ length = 84.0
 rest_length = 84.0
 stiffness = 64.0
 
+<<<<<<< HEAD
+=======
+[node name="Line2D" type="Line2D" parent="."]
+width = 1.0
+default_color = Color( 0.0941176, 0.282353, 0.854902, 1 )
+texture_mode = 2
+antialiased = true
+script = ExtResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -0.5, 0 )
+current = true
+
+>>>>>>> 445b1e78da2ec87871b35325ba3c352079597770
 [connection signal="body_entered" from="Boat/Area2D" to="Boat/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="WakeBoard/Area2D" to="WakeBoard/Area2D" method="_on_Area2D_body_entered"]

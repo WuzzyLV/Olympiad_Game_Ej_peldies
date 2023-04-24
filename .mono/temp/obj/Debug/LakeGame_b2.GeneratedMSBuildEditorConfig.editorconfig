@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = LakeGame_b2
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\saann\Documents\Godot\LakeGameMain\
+=======
+build_property.ProjectDir = C:\Users\ss\Desktop\LakeGameMain\
+>>>>>>> 445b1e78da2ec87871b35325ba3c352079597770
