@@ -63,6 +63,7 @@ custom_styles/normal = SubResource( 1 )
 icon = ExtResource( 6 )
 icon_align = 1
 script = ExtResource( 2 )
+ToGoScene = "res://scenes/Pludmale.tscn"
 
 [node name="Desc" type="RichTextLabel" parent="Beach"]
 visible = false
@@ -79,7 +80,7 @@ Liepājas pludmale ir skaista un daudzveidīga vieta, kas piedāvā daudzas iesp
 text = "Pludmale, 
 Liepājas pludmale ir skaista un daudzveidīga vieta, kas piedāvā daudzas iespējas aktīvai atpūtai un relaksācijai. Tā ir viena no iecienītākajām vietām Latvijā, kur var baudīt svaigu gaisu un jūras skatu."
 
-[node name="OtherLake" type="Button" parent="."]
+[node name="Beberlini" type="Button" parent="."]
 margin_left = 474.0
 margin_top = 171.0
 margin_right = 516.0
@@ -93,8 +94,9 @@ custom_styles/normal = SubResource( 1 )
 icon = ExtResource( 4 )
 icon_align = 1
 script = ExtResource( 2 )
+ToGoScene = "res://scenes/Beberlini.tscn"
 
-[node name="Desc" type="RichTextLabel" parent="OtherLake"]
+[node name="Desc" type="RichTextLabel" parent="Beberlini"]
 visible = false
 margin_left = -338.0
 margin_top = -35.0
@@ -144,9 +146,9 @@ Liepājas ezers, kas ir aptuveni 16 km garš un aptuveni 3 km plats, tā dziļum
 [connection signal="mouse_entered" from="Beach" to="Beach" method="MouseEntered"]
 [connection signal="mouse_exited" from="Beach" to="Beach" method="MouseExited"]
 [connection signal="pressed" from="Beach" to="Beach" method="Pressed"]
-[connection signal="mouse_entered" from="OtherLake" to="OtherLake" method="MouseEntered"]
-[connection signal="mouse_exited" from="OtherLake" to="OtherLake" method="MouseExited"]
-[connection signal="pressed" from="OtherLake" to="OtherLake" method="Pressed"]
+[connection signal="mouse_entered" from="Beberlini" to="Beberlini" method="MouseEntered"]
+[connection signal="mouse_exited" from="Beberlini" to="Beberlini" method="MouseExited"]
+[connection signal="pressed" from="Beberlini" to="Beberlini" method="Pressed"]
 [connection signal="mouse_entered" from="Lake" to="Lake" method="MouseEntered"]
 [connection signal="mouse_exited" from="Lake" to="Lake" method="MouseExited"]
 [connection signal="pressed" from="Lake" to="Lake" method="Pressed"]
