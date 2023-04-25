@@ -64,6 +64,7 @@ icon = ExtResource( 6 )
 icon_align = 1
 script = ExtResource( 1 )
 ToGoScene = "res://scenes/worlds/pludmale/Pludmale.tscn"
+Worlds = 1
 
 [node name="Desc" type="RichTextLabel" parent="Beach"]
 visible = false
@@ -127,6 +128,7 @@ icon = ExtResource( 4 )
 icon_align = 1
 script = ExtResource( 1 )
 ToGoScene = "res://scenes/worlds/liepajas_ezers/LiepajasEzers.tscn"
+Worlds = 2
 
 [node name="Desc" type="RichTextLabel" parent="Lake"]
 visible = false

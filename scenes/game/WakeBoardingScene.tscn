@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/game/wakeBoarding/ObjectSpawner.cs" type="Script" id=1]
 [ext_resource path="res://assets/Tiles/Frame3.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/Tiles/Frame2.png" type="Texture" id=6]
 [ext_resource path="res://assets/Tiles/water.tres" type="Texture" id=7]
 [ext_resource path="res://scenes/menus/MiddleMenu/MiddleMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/menus/tutorials/BoatTutorial/BoatTutorial.tscn" type="PackedScene" id=9]
 
 [sub_resource type="TileSet" id=5]
 0/name = "water.tres 0"
@@ -140,5 +141,7 @@ z_index = 1
 
 [node name="MiddleMenu" parent="." instance=ExtResource( 8 )]
 visible = false
+
+[node name="BoatTutorial" parent="." instance=ExtResource( 9 )]
 
 [connection signal="timeout" from="Node/Timer" to="Node/Timer" method="_on_Timer_timeout"]

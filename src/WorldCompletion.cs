@@ -55,4 +55,9 @@ public class WorldCompletion : Node
     {
         return false;
     }
+
+    public static bool AllWorldsDone()
+    {
+        return IsPludmaleCompleted() && IsBeberliniCompleted() && IsEzersCompleted();
+    }
 }
