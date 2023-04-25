@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/Tiles/water.tres" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/waterwaveG.tres" type="Texture" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://assets/objects/prefabs/SandCastle.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/Tiles/walkway.png" type="Texture" id=16]
 [ext_resource path="res://assets/logic/GenericTrigger/GenericTrigger.cs" type="Script" id=17]
+[ext_resource path="res://assets/objects/raw_textures/boat.png" type="Texture" id=18]
+[ext_resource path="res://assets/logic/CanInteract/CanInteract.tscn" type="PackedScene" id=19]
 
 [sub_resource type="TileSet" id=1]
 0/name = "water.tres 0"
@@ -246,7 +248,7 @@
 4/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 516, 148 )
+extents = Vector2( 105.5, 121 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 1179.75, 30 )
@@ -293,8 +295,22 @@ ToGoScene = "res://scenes/game/WakeBoardingScene.tscn"
 ReturnScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wakeboard"]
-position = Vector2( -16, -316 )
+position = Vector2( 4, -264 )
 shape = SubResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wakeboard"]
+position = Vector2( 4, -275 )
+scale = Vector2( 3.45833, 3.45833 )
+
+[node name="Boat" type="Sprite" parent="Wakeboard/StaticBody2D"]
+texture = ExtResource( 18 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wakeboard/StaticBody2D"]
+polygon = PoolVector2Array( 2.31325, -23.4217, -2.60241, -23.1325, -11.5663, -2.89157, -12.4337, 17.0602, -5.78313, 23.7108, 5.78313, 23.7108, 11.8554, 16.7711, 11.5663, -2.31326 )
+
+[node name="CanInteract" parent="Wakeboard" instance=ExtResource( 19 )]
+position = Vector2( 5.68434e-14, -415 )
+scale = Vector2( 2.88, 2.88 )
 
 [node name="player" parent="." instance=ExtResource( 13 )]
 Speed = 400.0
