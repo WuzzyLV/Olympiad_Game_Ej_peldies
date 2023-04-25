@@ -7,11 +7,13 @@ public class LocationButton : Button
 	// private int a = 2;
 	// private string b = "text";
 	[Export] public String ToGoScene= "res://scenes/MainScene.tscn";
+	[Export] public WorldCompletion.Worlds Worlds;
 
 	private RichTextLabel _desc;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Disabled=WorldCompletion.IsWorldComplete(Worlds);
 		_desc=GetChild<RichTextLabel>(0);
 	}
 
@@ -28,12 +30,14 @@ public class LocationButton : Button
 
 	public void MouseEntered()
 	{
-		GD.Print("Mouse Entered");
+		if (Disabled)
+			return;
 		_desc.Visible = true;
 	}
 	public void MouseExited()
 	{
-		GD.Print("Mouse Exited");
+		if (Disabled)
+			return;
 		_desc.Visible = false;
 	}
 	

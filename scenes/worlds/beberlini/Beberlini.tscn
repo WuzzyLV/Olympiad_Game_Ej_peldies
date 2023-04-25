@@ -22,6 +22,7 @@
 [ext_resource path="res://assets/objects/raw_textures/grass.png" type="Texture" id=20]
 [ext_resource path="res://assets/objects/raw_textures/sandgrass.png" type="Texture" id=21]
 [ext_resource path="res://assets/objects/raw_textures/Bench.png" type="Texture" id=22]
+[ext_resource path="res://assets/logic/GenericTrigger/GenericTrigger.tscn" type="PackedScene" id=23]
 
 [sub_resource type="TileSet" id=1]
 0/name = "water.tres 0"
@@ -959,6 +960,7 @@ shape = SubResource( 7 )
 position = Vector2( 540, -392 )
 shape = SubResource( 7 )
 
+<<<<<<< HEAD
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( -232, 120 )
 script = ExtResource( 17 )
@@ -968,6 +970,21 @@ ReturnScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 160, 32 )
 shape = SubResource( 28 )
+=======
+[node name="FishTrigger" parent="." instance=ExtResource( 23 )]
+position = Vector2( 894, 640 )
+ToGoScene = "res://scenes/game/FishingScene.tscn"
+ReturnScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
+Task = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FishTrigger"]
+polygon = PoolVector2Array( 59, -75, -33, -51, -91, -13, -75, 69, -2, 102, 56, 85, 91, 29, 104, -8, 102, -52 )
+
+[node name="CanInteract" parent="FishTrigger" instance=ExtResource( 19 )]
+position = Vector2( 38, 16 )
+scale = Vector2( 2, 2 )
+Task = 1
+>>>>>>> baa6db83dd3212eb0077bbd0d595a26b051c5f01
 
 [connection signal="body_entered" from="Wakeboard" to="Wakeboard" method="BodyEntered"]
 [connection signal="body_exited" from="Wakeboard" to="Wakeboard" method="BodyExited"]

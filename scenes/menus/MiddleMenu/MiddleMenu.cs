@@ -1,13 +1,16 @@
 using Godot;
+using System;
 
 public class MiddleMenu : CanvasLayer
 {
+    [Export] public String LabelMSG = "Spēle beigusies!";
     public int score;
-    public Godot.Label scoreLabel;
+    private Godot.Label scoreLabel;
 
     public override void _Ready()
     {
         scoreLabel = GetNode<Godot.Label>("Pause/Label");
+        GetNode<Godot.Label>("Pause/Title").Text= LabelMSG;
     }
 
     public void setScore(int score)
