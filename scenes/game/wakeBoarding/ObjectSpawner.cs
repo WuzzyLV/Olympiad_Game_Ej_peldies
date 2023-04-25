@@ -21,8 +21,8 @@ public class ObjectSpawner : Godot.Timer
             float height = GetViewport().Size.y;
             Random rand = new Random();
             GD.Print("test");
-            object1.Position = new Vector2(rand.Next(-100, 100), -height/2);
-            object2.Position = new Vector2(rand.Next(-100, 100), -height/2);
+            object1.Position = new Vector2(rand.Next(424, 600), 0);
+            object2.Position = new Vector2(rand.Next(424, 600), 0);
             GD.Print(height);
             
             int randItem = rand.Next(0, 2);
@@ -31,7 +31,7 @@ public class ObjectSpawner : Godot.Timer
             else
                 AddChild(object2);
 
-            WaitTime = rand.Next(1, 3);
+            WaitTime = rand.Next(1, 2);
             
     }
     public float time;
