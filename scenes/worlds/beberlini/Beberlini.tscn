@@ -298,14 +298,14 @@ ReturnScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
 position = Vector2( 4, -264 )
 shape = SubResource( 8 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Wakeboard"]
+[node name="Boat" type="StaticBody2D" parent="Wakeboard"]
 position = Vector2( 4, -275 )
 scale = Vector2( 3.45833, 3.45833 )
 
-[node name="Boat" type="Sprite" parent="Wakeboard/StaticBody2D"]
+[node name="Boat" type="Sprite" parent="Wakeboard/Boat"]
 texture = ExtResource( 18 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wakeboard/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wakeboard/Boat"]
 polygon = PoolVector2Array( 2.31325, -23.4217, -2.60241, -23.1325, -11.5663, -2.89157, -12.4337, 17.0602, -5.78313, 23.7108, 5.78313, 23.7108, 11.8554, 16.7711, 11.5663, -2.31326 )
 
 [node name="CanInteract" parent="Wakeboard" instance=ExtResource( 19 )]
