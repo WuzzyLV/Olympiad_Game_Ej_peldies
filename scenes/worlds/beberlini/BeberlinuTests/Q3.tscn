@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/fonts/size20_nonBold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/fonts/size16_nonBold.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scenes/game/test/GenericButton.cs" type="Script" id=3]
 [ext_resource path="res://scenes/game/test/TestRootNode.cs" type="Script" id=4]
+[ext_resource path="res://assets/stuff/TestBG2.jpg" type="Texture" id=5]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
@@ -14,6 +15,15 @@ script = ExtResource( 4 )
 ReturnScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
 Question = "Kādiem drošības pasākumiem jābūt ūdens atrakciju parkos, lai nodrošinātu apmeklētāju drošību?"
 Answers = PoolStringArray( "Sniegt detalizētas instrukcijas", "Ļaut skraidīt pa parku", "Skriet virsū citiem", "Nenoteikt vecuma ierobežojumu" )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -512.0
+margin_top = -304.0
+margin_right = 512.0
+margin_bottom = 296.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 1
 
 [node name="Button1" type="Button" parent="."]
 anchor_left = 0.5
@@ -73,6 +83,7 @@ margin_top = -288.0
 margin_right = -400.0
 margin_bottom = -248.0
 rect_scale = Vector2( 0.952676, 0.952676 )
+custom_fonts/font = ExtResource( 2 )
 text = "Health: X"
 autowrap = true
 

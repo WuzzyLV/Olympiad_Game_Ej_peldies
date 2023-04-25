@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/fonts/size16_nonBold.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scenes/game/test/GenericButton.cs" type="Script" id=3]
 [ext_resource path="res://scenes/game/test/TestRootNode.cs" type="Script" id=4]
-[ext_resource path="res://assets/stuff/Perch.png" type="Texture" id=5]
+[ext_resource path="res://assets/trash/Paper/PaperTrashCan.png" type="Texture" id=5]
 [ext_resource path="res://assets/stuff/TestBG2.jpg" type="Texture" id=6]
 
 [sub_resource type="Theme" id=1]
@@ -13,9 +13,9 @@ default_font = ExtResource( 1 )
 [node name="Q2" type="Node2D"]
 position = Vector2( 512, 304 )
 script = ExtResource( 4 )
-ReturnScene = "res://scenes/worlds/liepajas_ezers/LiepajasEzers.tscn"
-Question = "Kā sauc šo zivi?"
-Answers = PoolStringArray( "Asaris", "Līdaka", "Haizivs", "Zobenzivs" )
+ReturnScene = "res://scenes/worlds/pludmale/PludmaleTest/Q3.tscn"
+Question = "Ko met šajā tvertnē?"
+Answers = PoolStringArray( "Papīru", "Stiklu", "Ierīces", "Plastamasa" )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -512.0
@@ -100,7 +100,7 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="Perch" type="Sprite" parent="."]
-position = Vector2( 5.87498, -92.125 )
-scale = Vector2( 5.97308, 5.58333 )
+[node name="PaperTrashCan" type="Sprite" parent="."]
+position = Vector2( 0, -104 )
+scale = Vector2( 5.02174, 5.46552 )
 texture = ExtResource( 5 )

@@ -832,6 +832,7 @@ Task = 1
 position = Vector2( -263, -73 )
 script = ExtResource( 23 )
 ToGoScene = "res://scenes/worlds/liepajas_ezers/EzeraTests/Q1.tscn"
+Task = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestTrigger"]
 position = Vector2( 1, 0 )
@@ -842,6 +843,7 @@ __meta__ = {
 
 [node name="CanInteract" parent="TestTrigger" instance=ExtResource( 21 )]
 z_index = 5
+Task = 5
 
 [node name="Reinis" type="Sprite" parent="TestTrigger"]
 position = Vector2( -85, 72 )

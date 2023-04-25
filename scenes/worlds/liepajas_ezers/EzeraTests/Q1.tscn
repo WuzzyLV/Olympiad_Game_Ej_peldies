@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/fonts/size20_nonBold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/fonts/size16_nonBold.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scenes/game/test/GenericButton.cs" type="Script" id=3]
 [ext_resource path="res://scenes/game/test/TestRootNode.cs" type="Script" id=4]
 [ext_resource path="res://assets/stuff/Pike.png" type="Texture" id=5]
+[ext_resource path="res://assets/stuff/TestBG2.jpg" type="Texture" id=6]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
@@ -15,6 +16,15 @@ script = ExtResource( 4 )
 ReturnScene = "res://scenes/worlds/liepajas_ezers/EzeraTests/Q2.tscn"
 Question = "Kā sauc šo zivi?"
 Answers = PoolStringArray( "Līdaka", "Asaris", "Rauda", "Haizivs" )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -512.0
+margin_top = -304.0
+margin_right = 512.0
+margin_bottom = 296.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 1
 
 [node name="Button1" type="Button" parent="."]
 anchor_left = 0.5
@@ -74,6 +84,7 @@ margin_top = -288.0
 margin_right = -400.0
 margin_bottom = -248.0
 rect_scale = Vector2( 0.952676, 0.952676 )
+custom_fonts/font = ExtResource( 2 )
 text = "Health: X"
 autowrap = true
 
