@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/Tiles/water.tres" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/waterwaveG.tres" type="Texture" id=2]
@@ -19,6 +19,9 @@
 [ext_resource path="res://assets/logic/GenericTrigger/GenericTrigger.cs" type="Script" id=17]
 [ext_resource path="res://assets/objects/raw_textures/boat.png" type="Texture" id=18]
 [ext_resource path="res://assets/logic/CanInteract/CanInteract.tscn" type="PackedScene" id=19]
+[ext_resource path="res://assets/objects/raw_textures/grass.png" type="Texture" id=20]
+[ext_resource path="res://assets/objects/raw_textures/sandgrass.png" type="Texture" id=21]
+[ext_resource path="res://assets/objects/raw_textures/Bench.png" type="Texture" id=22]
 
 [sub_resource type="TileSet" id=1]
 0/name = "water.tres 0"
@@ -247,6 +250,62 @@
 4/shapes = [  ]
 4/z_index = 0
 
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 52, 40, 0, 40, 0, 0, 52, 0 )
+
+[sub_resource type="TileSet" id=26]
+0/name = "Bench.png 0"
+0/texture = ExtResource( 22 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 52, 40 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 25 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=27]
+0/name = "grass.png 0"
+0/texture = ExtResource( 20 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 31, 15 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "sandgrass.png 1"
+1/texture = ExtResource( 21 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 31, 15 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 105.5, 121 )
 
@@ -288,6 +347,18 @@ tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 589858, 3, 0, 655394, 3, 65539, 720930, 3, 65539, 786465, 3, 0, 786466, 3, 131080, 786467, 3, 2, 852001, 3, 65536, 852002, 3, 65537, 852003, 3, 65538, 917536, 3, 0, 917537, 3, 131078, 917538, 3, 65537, 917539, 3, 65538, 983071, 3, 0, 983072, 3, 131078, 983073, 3, 65537, 983074, 3, 65537, 983075, 3, 65538, 1048607, 3, 65536, 1048608, 3, 65537, 1048609, 3, 65537, 1048610, 3, 65537, 1048611, 3, 65538, 1114142, 3, 0, 1114143, 3, 131078, 1114144, 3, 65537, 1114145, 3, 65537, 1114146, 3, 65541, 1114147, 3, 131074, 1179677, 3, 0, 1179678, 3, 131078, 1179679, 3, 65537, 1179680, 3, 65541, 1179681, 3, 131073, 1179682, 3, 131074, 1245212, 3, 0, 1245213, 3, 131078, 1245214, 3, 65537, 1245215, 3, 65541, 1245216, 3, 131074, 1310747, 3, 0, 1310748, 3, 131078, 1310749, 3, 65541, 1310750, 3, 131073, 1310751, 3, 131074, 1376283, 3, 65536, 1376284, 3, 65537, 1376285, 3, 65538, 1441818, 3, 0, 1441819, 3, 131078, 1441820, 3, 65541, 1441821, 3, 131074, 1507353, 3, 0, 1507354, 3, 131078, 1507355, 3, 65541, 1507356, 3, 131074, 1572889, 3, 65536, 1572890, 3, 65541, 1572891, 3, 131074, 1638425, 3, 65540, 1638426, 3, 131074, 1703961, 3, 131075 )
+
+[node name="Bench" type="TileMap" parent="."]
+tile_set = SubResource( 26 )
+cell_size = Vector2( 55, 40 )
+format = 1
+tile_data = PoolIntArray( -589840, 0, 0, -589838, 0, 0, -655347, 0, 0, -655346, 0, 0, -655345, 0, 0, -196602, 0, 0, -196601, 0, 0, 851964, 0, 0, 851965, 0, 0, 786434, 0, 0, 786435, 0, 0 )
+
+[node name="Grass" type="TileMap" parent="."]
+tile_set = SubResource( 27 )
+cell_size = Vector2( 31, 15 )
+format = 1
+tile_data = PoolIntArray( -1638423, 0, 0, -1572894, 0, 0, -1572893, 0, 0, -1572892, 0, 0, -1572891, 0, 0, -1572890, 0, 0, -1572889, 0, 0, -1572887, 0, 0, -1638378, 0, 0, -1638376, 0, 0, -1638375, 0, 0, -1638374, 0, 0, -1638373, 0, 0, -1638372, 0, 0, -1638371, 0, 0, -1507352, 0, 0, -1507351, 0, 0, -1572841, 0, 0, -1572840, 0, 0, -1572839, 0, 0, -1572838, 0, 0, -1572837, 0, 0, -1572836, 0, 0, -1441820, 0, 0, -1441819, 0, 0, -1507305, 0, 0, -1507300, 0, 0, -1507299, 0, 0, -1376283, 0, 0, -1376282, 0, 0, -1376281, 0, 0, -1376280, 0, 0, -1441763, 0, 0, -1441762, 0, 0, -1441761, 0, 0, -1114137, 0, 0, -1048601, 0, 0, -1048600, 0, 0, -983064, 0, 0, -983063, 0, 0, -983062, 0, 0, -393232, 1, 0, -393225, 1, 0, -393224, 1, 0, -393223, 1, 0, -327696, 1, 0, -327689, 1, 0, -327685, 1, 0, -327684, 1, 0, -393206, 1, 0, -393205, 1, 0, -393204, 1, 0, -393203, 1, 0, -262161, 1, 0, -262160, 1, 0, -262156, 1, 0, -262148, 1, 0, -262147, 1, 0, -262146, 1, 0, -262145, 1, 0, -327670, 1, 0, -327669, 1, 0, -327668, 1, 0, -327667, 1, 0, -327666, 1, 0, -196614, 1, 0, -196613, 1, 0, -131077, 1, 0, -196594, 1, 0, -65541, 1, 0, -65528, 1, 0, 131068, 1, 0, 131069, 1, 0, 327669, 1, 0, 393204, 1, 0, 393205, 1, 0, 393206, 1, 0, 327702, 0, 0, 327703, 0, 0, 458740, 1, 0, 458741, 1, 0, 458742, 1, 0, 458743, 1, 0, 458744, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458773, 0, 0, 589796, 0, 0, 655332, 0, 0, 720868, 0, 0, 720889, 1, 0, 655385, 0, 0, 655386, 0, 0, 655387, 0, 0, 786405, 0, 0, 786406, 0, 0, 786407, 0, 0, 786408, 0, 0, 786409, 0, 0, 786425, 1, 0, 786426, 1, 0, 786427, 1, 0, 720916, 0, 0, 720918, 0, 0, 720919, 0, 0, 720925, 0, 0, 720926, 0, 0, 1048586, 1, 0, 1048587, 1, 0, 1114124, 1, 0, 1245162, 0, 0, 1310696, 0, 0, 1310697, 0, 0, 1310698, 0, 0, 1376231, 0, 0, 1376232, 0, 0, 1507309, 0, 0, 1441799, 1, 0, 1572844, 0, 0, 1638380, 0, 0, 1703915, 0, 0, 1769444, 0, 0, 1769450, 0, 0, 1834980, 0, 0, 1834981, 0, 0, 1834986, 0, 0, 1900518, 0, 0, 1900519, 0, 0, 1900520, 0, 0, 1900522, 0, 0, 1966056, 0, 0, 1966088, 1, 0, 2162696, 1, 0, 2293732, 0, 0, 2293743, 1, 0, 2293744, 1, 0, 2293752, 1, 0, 2293753, 1, 0, 2293754, 1, 0, 2293755, 1, 0, 2293756, 1, 0, 2228227, 1, 0, 2228228, 1, 0, 2228229, 1, 0, 2228230, 1, 0, 2228231, 1, 0, 2359268, 0, 0, 2359276, 0, 0, 2359277, 0, 0, 2359278, 0, 0, 2293768, 1, 0, 2424805, 0, 0, 2424806, 0, 0, 2424807, 0, 0, 2424822, 1, 0, 2424823, 1, 0, 2424824, 1, 0, 2424825, 1, 0, 2424826, 1, 0, 2359303, 1, 0, 2359304, 1, 0, 2490344, 0, 0, 2490345, 0, 0, 2490356, 1, 0, 2490358, 1, 0, 2490362, 1, 0, 2490363, 1, 0, 2490364, 1, 0, 2424845, 1, 0, 2424846, 1, 0, 2424847, 1, 0, 2555881, 0, 0, 2621459, 0, 0, 2621460, 0, 0, 2621461, 0, 0, 2949113, 1, 0, 2949114, 1, 0, 2883597, 1, 0, 3014648, 1, 0, 3014649, 1, 0, 2949132, 1, 0, 2949133, 1, 0, 3080181, 1, 0, 3080182, 1, 0, 3080183, 1, 0, 3080184, 1, 0, 3014661, 1, 0, 3014662, 1, 0, 3014663, 1, 0, 3080197, 1, 0 )
 
 [node name="Wakeboard" type="Area2D" parent="."]
 script = ExtResource( 17 )
@@ -807,7 +878,7 @@ scale = Vector2( 2, 2 )
 [node name="Branches" type="Node2D" parent="."]
 
 [node name="Branch" parent="Branches" instance=ExtResource( 9 )]
-position = Vector2( 305, -108 )
+position = Vector2( 308, -144 )
 scale = Vector2( 2, 2 )
 
 [node name="Branch1" parent="Branches" instance=ExtResource( 12 )]
