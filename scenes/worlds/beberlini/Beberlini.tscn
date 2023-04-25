@@ -246,7 +246,7 @@
 4/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 516, 69 )
+extents = Vector2( 516, 148 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 1179.75, 30 )
@@ -293,7 +293,7 @@ ToGoScene = "res://scenes/game/WakeBoardingScene.tscn"
 ReturnScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wakeboard"]
-position = Vector2( -16, -384 )
+position = Vector2( -16, -316 )
 shape = SubResource( 8 )
 
 [node name="player" parent="." instance=ExtResource( 13 )]
