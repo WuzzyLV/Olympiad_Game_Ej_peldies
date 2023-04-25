@@ -126,6 +126,7 @@ custom_styles/normal = SubResource( 1 )
 icon = ExtResource( 4 )
 icon_align = 1
 script = ExtResource( 1 )
+ToGoScene = "res://scenes/worlds/liepajas_ezers/LiepajasEzers.tscn"
 
 [node name="Desc" type="RichTextLabel" parent="Lake"]
 visible = false
