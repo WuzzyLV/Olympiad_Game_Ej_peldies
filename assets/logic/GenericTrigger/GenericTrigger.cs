@@ -6,6 +6,7 @@ public class GenericTrigger : Area2D
     
     [Export] public String ToGoScene = "res://scenes/menus/MainMenu.tscn";
     [Export] public String ReturnScene = "res://scenes/worlds/liepajas_ezers/LiepajasEzers.tscn";
+    [Export] public PlayerProgress.Tasks Task;
     [Export] public String Hotkey = "interact";
 
     
@@ -18,6 +19,8 @@ public class GenericTrigger : Area2D
     public override void _Process(float delta)
     {
         if (!isColliding)
+            return;
+        if (PlayerProgress.IsTaskCompleted(Task))
             return;
         
         if (Input.IsActionJustPressed(Hotkey))
