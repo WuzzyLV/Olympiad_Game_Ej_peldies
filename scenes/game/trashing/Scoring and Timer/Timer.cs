@@ -10,9 +10,12 @@ public class Timer : RichTextLabel
     private int milliseconds;
     private string timeString;
     TrashGameGlobal g;
+    ScoreInfo scoreInfo;
+
     public override void _Ready()
     {
         g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
+        scoreInfo = GetNode<ScoreInfo>("/root/ScoreInfo");
     }
     public override void _Process(float delta)
     { 
@@ -28,14 +31,16 @@ public class Timer : RichTextLabel
         if (timeElapsed <= 0)
         {
             GD.Print("Game Over");
-            GD.Print(g.score);
+            scoreInfo.setScore(g.score);
             Score.AddScore(g.score);
+            GD.Print(Score.GetScore());
             GetTree().ChangeScene(PlayerProgress.LastScene);
             PlayerProgress.TaskFinished(PlayerProgress.Tasks.TrashPludmale);
         }
        
     }
+
             
-    
+   
 }
 

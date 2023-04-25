@@ -14,6 +14,8 @@ public class TrashScoreLabel : RichTextLabel
         Text = "Punkti: " + g.score;
         
     }
+
+    
     
     
 }
