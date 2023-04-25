@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://assets/Tiles/water.tres" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/waterwave.tres" type="Texture" id=2]
@@ -22,7 +22,7 @@
 [ext_resource path="res://assets/logic/GenericTrigger/GenericTrigger.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/logic/CanInteract/CanInteract.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/worlds/WorldDoneCheck.cs" type="Script" id=22]
-
+[ext_resource path="res://assets/Tiles/bubbles.tres" type="Texture" id=23]
 
 [sub_resource type="TileSet" id=1]
 0/name = "water.tres 0"
@@ -247,7 +247,7 @@
 3/shapes = [  ]
 3/z_index = 0
 4/name = "bubbles.tres 4"
-4/texture = ExtResource( 20 )
+4/texture = ExtResource( 23 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 32, 32 )
