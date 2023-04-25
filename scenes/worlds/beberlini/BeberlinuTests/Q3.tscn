@@ -12,6 +12,7 @@ default_font = ExtResource( 1 )
 [node name="Q3" type="Node2D"]
 position = Vector2( 512, 304 )
 script = ExtResource( 4 )
+Task = 5
 ReturnScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
 Question = "Kādiem drošības pasākumiem jābūt ūdens atrakciju parkos, lai nodrošinātu apmeklētāju drošību?"
 Answers = PoolStringArray( "Sniegt detalizētas instrukcijas", "Ļaut skraidīt pa parku", "Skriet virsū citiem", "Nenoteikt vecuma ierobežojumu" )

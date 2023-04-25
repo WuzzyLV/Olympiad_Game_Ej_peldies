@@ -986,20 +986,20 @@ shape = SubResource( 7 )
 position = Vector2( 540, -392 )
 shape = SubResource( 7 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="TestTrigger" type="Area2D" parent="."]
 position = Vector2( -176, 200 )
 script = ExtResource( 17 )
 ToGoScene = "res://scenes/worlds/beberlini/BeberlinuTests/Q1.tscn"
 ReturnScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
-Task = 3
+Task = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTrigger"]
 shape = SubResource( 28 )
 
-[node name="CanInteract" parent="Area2D" instance=ExtResource( 19 )]
+[node name="CanInteract" parent="TestTrigger" instance=ExtResource( 19 )]
 position = Vector2( 0, -1 )
 scale = Vector2( 1.5, 1.5 )
-Task = 3
+Task = 5
 
 [node name="FishTrigger" parent="." instance=ExtResource( 23 )]
 position = Vector2( 894, 640 )
@@ -1017,5 +1017,5 @@ Task = 1
 
 [connection signal="body_entered" from="Wakeboard" to="Wakeboard" method="BodyEntered"]
 [connection signal="body_exited" from="Wakeboard" to="Wakeboard" method="BodyExited"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="BodyEntered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="BodyExited"]
+[connection signal="body_entered" from="TestTrigger" to="TestTrigger" method="BodyEntered"]
+[connection signal="body_exited" from="TestTrigger" to="TestTrigger" method="BodyExited"]

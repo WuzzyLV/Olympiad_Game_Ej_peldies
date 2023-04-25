@@ -7,6 +7,7 @@ public class PlayerProgress : Node
 
     public enum Tasks
     {
+        None,
         BoatGameBeberlini,
         FishingBeberlini,
         FishingEzers,
@@ -33,6 +34,8 @@ public class PlayerProgress : Node
 
     public static void TaskFinished(Tasks task)
     {
+        if (task==Tasks.None)
+            return;
         if (_tasksCompleted.ContainsKey(task))
             return;
         

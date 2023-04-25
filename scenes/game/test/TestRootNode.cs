@@ -3,6 +3,7 @@ using System;
 
 public class TestRootNode : Node2D
 {
+    [Export] public PlayerProgress.Tasks Task= PlayerProgress.Tasks.None;
     [Export] public String ReturnScene = "res://scenes/menus/MapScene.tscn";
     [Export] public int Health = 2;
     [Export] public String Question = "What is the capital of Canada?";
@@ -76,6 +77,7 @@ public class TestRootNode : Node2D
     
     private void _GameEndProcedure(String scene)
     {
+        PlayerProgress.TaskFinished(Task);
         Score.AddScore(100*Health);
         GetTree().ChangeScene(scene);
     }
