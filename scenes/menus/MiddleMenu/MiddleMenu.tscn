@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/menus/MiddleMenu/Pause.cs" type="Script" id=1]
-[ext_resource path="res://scenes/menus/MiddleMenu/ScoreInfo.cs" type="Script" id=2]
+[ext_resource path="res://scenes/menus/MiddleMenu/MiddleMenu.cs" type="Script" id=2]
 [ext_resource path="res://assets/fonts/size16_nonBold.tres" type="DynamicFont" id=3]
 
 [sub_resource type="Theme" id=1]
@@ -9,6 +9,31 @@ default_font = ExtResource( 3 )
 
 [sub_resource type="Theme" id=2]
 default_font = ExtResource( 3 )
+
+[sub_resource type="CSharpScript" id=3]
+resource_name = "Score_label"
+script/source = "using Godot;
+using System;
+
+public class Score_label : Label
+{
+    // Declare member variables here. Examples:
+    // private int a = 2;
+    // private string b = \"text\";
+
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
+        
+    }
+
+//  // Called every frame. 'delta' is the elapsed time since the previous frame.
+//  public override void _Process(float delta)
+//  {
+//      
+//  }
+}
+"
 
 [node name="MiddleMenu" type="CanvasLayer"]
 layer = 3
@@ -64,3 +89,4 @@ text = "Spēles punktu skaits:
 s"
 align = 1
 valign = 1
+script = SubResource( 3 )

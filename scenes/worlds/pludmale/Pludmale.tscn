@@ -428,7 +428,6 @@ position = Vector2( 120, -352 )
 script = ExtResource( 14 )
 ToGoScene = "res://scenes/game/TrashScene.tscn"
 ReturnScene = "res://scenes/worlds/pludmale/Pludmale.tscn"
-Task = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrashCollecting"]
 position = Vector2( -137, 639 )

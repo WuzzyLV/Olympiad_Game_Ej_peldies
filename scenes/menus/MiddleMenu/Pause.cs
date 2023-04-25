@@ -10,6 +10,8 @@ public class Pause : Control
         GetTree().Paused = pauseState;
         Visible = pauseState;
     }
+
+    
         
     
 }

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class ScoreInfo : CanvasLayer
+public class MiddleMenu : CanvasLayer
 {
     public int score;
     public Label scoreLabel;
@@ -13,12 +13,15 @@ public class ScoreInfo : CanvasLayer
 
     public void setScore(int score)
     {
-        this.score = score;
         scoreLabel.Text = "Spēles punktu skaits: " + score;
     }
 
-    public int getScore()
-    { 
-       return score;
+    public void show()
+    {
+        var pauseState = !GetTree().Paused;
+        GetTree().Paused = pauseState;
+        Visible = pauseState;
     }
+
+
 }
