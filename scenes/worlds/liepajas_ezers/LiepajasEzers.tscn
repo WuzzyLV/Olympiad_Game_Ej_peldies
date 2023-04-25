@@ -22,7 +22,6 @@
 [ext_resource path="res://assets/logic/GenericTrigger/GenericTrigger.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/logic/CanInteract/CanInteract.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/worlds/WorldDoneCheck.cs" type="Script" id=22]
-[ext_resource path="res://assets/Tiles/bubbles.tres" type="Texture" id=23]
 [ext_resource path="res://assets/logic/GenericTrigger/GenericTrigger.cs" type="Script" id=23]
 [ext_resource path="res://assets/objects/raw_textures/reinis.png" type="Texture" id=24]
 
@@ -249,8 +248,6 @@
 3/shapes = [  ]
 3/z_index = 0
 4/name = "bubbles.tres 4"
-<<<<<<< HEAD
-4/texture = ExtResource( 23 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 32, 32 )
@@ -603,7 +600,6 @@ Speed = 400.0
 remote_path = NodePath("../../Camera2D2")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
-current = true
 limit_left = -600
 limit_top = -700
 limit_right = 600
