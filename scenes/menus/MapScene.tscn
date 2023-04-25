@@ -1,13 +1,11 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://assets/fonts/consola.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://scenes/game/map/LocationButton.cs" type="Script" id=2]
-[ext_resource path="res://scenes/game/map/TowerIcon.png" type="Texture" id=3]
-[ext_resource path="res://scenes/game/map/ziplineIcon.png" type="Texture" id=4]
-[ext_resource path="res://scenes/game/map/Map.png" type="Texture" id=5]
-[ext_resource path="res://scenes/game/map/Beachicon.png" type="Texture" id=6]
-[ext_resource path="res://scenes/game/map/ScoreLabelMap.cs" type="Script" id=7]
-[ext_resource path="res://assets/fonts/dynamicfont_regular.tres" type="DynamicFont" id=8]
+[ext_resource path="res://scenes/menus/map/LocationButton.cs" type="Script" id=1]
+[ext_resource path="res://assets/fonts/consola.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/menus/map/Map.png" type="Texture" id=3]
+[ext_resource path="res://scenes/menus/map/TowerIcon.png" type="Texture" id=4]
+[ext_resource path="res://scenes/menus/map/ziplineIcon.png" type="Texture" id=5]
+[ext_resource path="res://scenes/menus/map/Beachicon.png" type="Texture" id=6]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0.164706 )
@@ -24,11 +22,11 @@ corner_radius_bottom_left = 45
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="DynamicFont" id=9]
-font_data = ExtResource( 1 )
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 2 )
 
 [sub_resource type="Theme" id=8]
-default_font = SubResource( 9 )
+default_font = SubResource( 7 )
 
 [sub_resource type="StyleBoxFlat" id=6]
 border_width_left = 5
@@ -48,7 +46,7 @@ anchor_bottom = 1.0
 [node name="Map" type="Sprite" parent="."]
 position = Vector2( 511, 300 )
 scale = Vector2( 0.72503, 0.72503 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="Beach" type="Button" parent="."]
 margin_left = 391.0
@@ -64,8 +62,8 @@ custom_styles/disabled = SubResource( 5 )
 custom_styles/normal = SubResource( 1 )
 icon = ExtResource( 6 )
 icon_align = 1
-script = ExtResource( 2 )
-ToGoScene = "res://scenes/Pludmale.tscn"
+script = ExtResource( 1 )
+ToGoScene = "res://scenes/worlds/pludmale/Pludmale.tscn"
 
 [node name="Desc" type="RichTextLabel" parent="Beach"]
 visible = false
@@ -82,7 +80,7 @@ Liepājas pludmale ir skaista un daudzveidīga vieta, kas piedāvā daudzas iesp
 text = "Pludmale, 
 Liepājas pludmale ir skaista un daudzveidīga vieta, kas piedāvā daudzas iespējas aktīvai atpūtai un relaksācijai. Tā ir viena no iecienītākajām vietām Latvijā, kur var baudīt svaigu gaisu un jūras skatu."
 
-[node name="Beberlini" type="Button" parent="."]
+[node name="OtherLake" type="Button" parent="."]
 margin_left = 474.0
 margin_top = 171.0
 margin_right = 516.0
@@ -93,12 +91,12 @@ custom_styles/pressed = SubResource( 3 )
 custom_styles/focus = SubResource( 4 )
 custom_styles/disabled = SubResource( 5 )
 custom_styles/normal = SubResource( 1 )
-icon = ExtResource( 4 )
+icon = ExtResource( 5 )
 icon_align = 1
-script = ExtResource( 2 )
-ToGoScene = "res://scenes/Beberlini.tscn"
+script = ExtResource( 1 )
+ToGoScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
 
-[node name="Desc" type="RichTextLabel" parent="Beberlini"]
+[node name="Desc" type="RichTextLabel" parent="OtherLake"]
 visible = false
 margin_left = -338.0
 margin_top = -35.0
@@ -125,9 +123,9 @@ custom_styles/pressed = SubResource( 3 )
 custom_styles/focus = SubResource( 4 )
 custom_styles/disabled = SubResource( 5 )
 custom_styles/normal = SubResource( 1 )
-icon = ExtResource( 3 )
+icon = ExtResource( 4 )
 icon_align = 1
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 
 [node name="Desc" type="RichTextLabel" parent="Lake"]
 visible = false
@@ -145,21 +143,12 @@ Liepājas ezers, kas ir aptuveni 16 km garš un aptuveni 3 km plats, tā dziļum
 text = "Liepajas ezers,
 Liepājas ezers, kas ir aptuveni 16 km garš un aptuveni 3 km plats, tā dziļums var sasniegt līdz 13 metriem. Ezers ir populārs makšķerēšanas galamērķis, kā arī tajā ir iespējams dažāadas ūdens aktivitātes."
 
-[node name="Label" type="Label" parent="."]
-margin_left = 35.0
-margin_top = 53.0
-margin_right = 107.0
-margin_bottom = 76.0
-rect_scale = Vector2( 2.60789, 2.60789 )
-custom_fonts/font = ExtResource( 8 )
-script = ExtResource( 7 )
-
 [connection signal="mouse_entered" from="Beach" to="Beach" method="MouseEntered"]
 [connection signal="mouse_exited" from="Beach" to="Beach" method="MouseExited"]
 [connection signal="pressed" from="Beach" to="Beach" method="Pressed"]
-[connection signal="mouse_entered" from="Beberlini" to="Beberlini" method="MouseEntered"]
-[connection signal="mouse_exited" from="Beberlini" to="Beberlini" method="MouseExited"]
-[connection signal="pressed" from="Beberlini" to="Beberlini" method="Pressed"]
+[connection signal="mouse_entered" from="OtherLake" to="OtherLake" method="MouseEntered"]
+[connection signal="mouse_exited" from="OtherLake" to="OtherLake" method="MouseExited"]
+[connection signal="pressed" from="OtherLake" to="OtherLake" method="Pressed"]
 [connection signal="mouse_entered" from="Lake" to="Lake" method="MouseEntered"]
 [connection signal="mouse_exited" from="Lake" to="Lake" method="MouseExited"]
 [connection signal="pressed" from="Lake" to="Lake" method="Pressed"]
