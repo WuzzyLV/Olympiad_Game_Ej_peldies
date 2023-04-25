@@ -1,14 +1,13 @@
 using Godot;
-using System;
 
 public class MiddleMenu : CanvasLayer
 {
     public int score;
-    public Label scoreLabel;
+    public Godot.Label scoreLabel;
 
     public override void _Ready()
     {
-        scoreLabel = GetNode<Label>("Pause/Label");
+        scoreLabel = GetNode<Godot.Label>("Pause/Label");
     }
 
     public void setScore(int score)
