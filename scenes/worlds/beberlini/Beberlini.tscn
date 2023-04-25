@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/Tiles/water.tres" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/waterwaveG.tres" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/objects/raw_textures/seashells.png" type="Texture" id=14]
 [ext_resource path="res://assets/objects/prefabs/SandCastle.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/Tiles/walkway.png" type="Texture" id=16]
+[ext_resource path="res://assets/logic/GenericTrigger/GenericTrigger.cs" type="Script" id=17]
 
 [sub_resource type="TileSet" id=1]
 0/name = "water.tres 0"
@@ -244,6 +245,9 @@
 4/shapes = [  ]
 4/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 516, 69 )
+
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 1179.75, 30 )
 
@@ -253,7 +257,7 @@ extents = Vector2( 57.5, 768.5 )
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 54, 211.5 )
 
-[node name="Node2D3" type="Node2D"]
+[node name="Beberlini" type="Node2D"]
 
 [node name="BG" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -282,6 +286,15 @@ tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 589858, 3, 0, 655394, 3, 65539, 720930, 3, 65539, 786465, 3, 0, 786466, 3, 131080, 786467, 3, 2, 852001, 3, 65536, 852002, 3, 65537, 852003, 3, 65538, 917536, 3, 0, 917537, 3, 131078, 917538, 3, 65537, 917539, 3, 65538, 983071, 3, 0, 983072, 3, 131078, 983073, 3, 65537, 983074, 3, 65537, 983075, 3, 65538, 1048607, 3, 65536, 1048608, 3, 65537, 1048609, 3, 65537, 1048610, 3, 65537, 1048611, 3, 65538, 1114142, 3, 0, 1114143, 3, 131078, 1114144, 3, 65537, 1114145, 3, 65537, 1114146, 3, 65541, 1114147, 3, 131074, 1179677, 3, 0, 1179678, 3, 131078, 1179679, 3, 65537, 1179680, 3, 65541, 1179681, 3, 131073, 1179682, 3, 131074, 1245212, 3, 0, 1245213, 3, 131078, 1245214, 3, 65537, 1245215, 3, 65541, 1245216, 3, 131074, 1310747, 3, 0, 1310748, 3, 131078, 1310749, 3, 65541, 1310750, 3, 131073, 1310751, 3, 131074, 1376283, 3, 65536, 1376284, 3, 65537, 1376285, 3, 65538, 1441818, 3, 0, 1441819, 3, 131078, 1441820, 3, 65541, 1441821, 3, 131074, 1507353, 3, 0, 1507354, 3, 131078, 1507355, 3, 65541, 1507356, 3, 131074, 1572889, 3, 65536, 1572890, 3, 65541, 1572891, 3, 131074, 1638425, 3, 65540, 1638426, 3, 131074, 1703961, 3, 131075 )
+
+[node name="Wakeboard" type="Area2D" parent="."]
+script = ExtResource( 17 )
+ToGoScene = "res://scenes/game/WakeBoardingScene.tscn"
+ReturnScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wakeboard"]
+position = Vector2( -16, -384 )
+shape = SubResource( 8 )
 
 [node name="player" parent="." instance=ExtResource( 13 )]
 Speed = 400.0
@@ -853,3 +866,6 @@ shape = SubResource( 7 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision/StaticBody2D6"]
 position = Vector2( 540, -392 )
 shape = SubResource( 7 )
+
+[connection signal="body_entered" from="Wakeboard" to="Wakeboard" method="_on_Wakeboard_body_entered"]
+[connection signal="body_exited" from="Wakeboard" to="Wakeboard" method="_on_Wakeboard_body_exited"]

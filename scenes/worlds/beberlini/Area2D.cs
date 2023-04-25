@@ -1,19 +1,18 @@
 using Godot;
 using System;
 
-public class ActivateGame : Area2D
+public class Area2D : Godot.Area2D
 {
-
     bool colliding = false;
-
-    public void _on_MiniGame_body_entered(Node body)
+    public void _on_Wakeboard_body_entered(Node body)
     {
-        colliding = true;
+        if(body.Name == "player")
+            colliding = true;
     }
-
-    public void _on_MiniGame_body_exited(Node body)
+    public void _on_Wakeboard_body_exited(Node body)
     {
-        colliding = false;
+        if(body.Name == "player")
+            colliding = false;
     }
 
     public override void _PhysicsProcess(float delta)
@@ -22,8 +21,7 @@ public class ActivateGame : Area2D
             return;
         if (!Input.IsActionJustPressed("interact"))
             return;
-
+        
         GetTree().ChangeScene("res://scenes/game/WakeBoardingScene.tscn");
-
     }
 }

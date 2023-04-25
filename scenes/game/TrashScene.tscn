@@ -69,6 +69,8 @@ extents = Vector2( 11, 695 )
 extents = Vector2( 1129.75, 15 )
 
 [node name="GameScene" type="Node2D"]
+position = Vector2( 512, 320 )
+scale = Vector2( 1, 1.00577 )
 script = ExtResource( 9 )
 
 [node name="BG" type="TileMap" parent="."]
