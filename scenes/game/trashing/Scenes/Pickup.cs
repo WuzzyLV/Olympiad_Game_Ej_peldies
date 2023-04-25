@@ -36,7 +36,7 @@ public class Pickup : Godot.Label
             time -= delta;
         }
 
-        GD.Print(g.dropped);
+        
 
         if(g.dropped)
         {
@@ -49,7 +49,7 @@ public class Pickup : Godot.Label
             }
         }
       
-        GD.Print(time);
+        
 
         if (time <= 0)
         { 

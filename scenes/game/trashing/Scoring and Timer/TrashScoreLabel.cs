@@ -11,7 +11,7 @@ public class TrashScoreLabel : RichTextLabel
     public override void _PhysicsProcess(float delta)
     {
         TrashGameGlobal g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
-        Text = "Score: " + g.score;
+        Text = "Punkti: " + g.score;
         
     }
     

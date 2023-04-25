@@ -146,6 +146,7 @@ margin_right = 52.0
 margin_bottom = -275.181
 text = "01 : 00 : 00"
 script = ExtResource( 8 )
+timeElapsed = 20.0
 
 [node name="GlassCan" parent="." instance=ExtResource( 2 )]
 position = Vector2( -164, 91 )

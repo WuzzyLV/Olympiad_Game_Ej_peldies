@@ -424,12 +424,13 @@ position = Vector2( -527, 263 )
 shape = SubResource( 5 )
 
 [node name="TrashCollecting" type="Area2D" parent="."]
+position = Vector2( 120, -352 )
 script = ExtResource( 14 )
 ToGoScene = "res://scenes/game/TrashScene.tscn"
 ReturnScene = "res://scenes/worlds/pludmale/Pludmale.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrashCollecting"]
-position = Vector2( 3, 323 )
+position = Vector2( -137, 639 )
 shape = SubResource( 7 )
 
 [connection signal="body_entered" from="TrashCollecting" to="TrashCollecting" method="BodyEntered"]

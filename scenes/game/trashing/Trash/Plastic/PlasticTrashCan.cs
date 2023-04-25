@@ -38,14 +38,12 @@ public class PlasticTrashCan : Area2D
         {
             g.dropped = true;
             g.picked = false;
-            Score.AddScore(-1);
             g.paper = false; g.glass = false;
             g.score--;
             return;
         }
         g.picked = false;
         g.plastic = false;
-        Score.AddScore(1);
         g.score++;
         g.dropped = true;
     }

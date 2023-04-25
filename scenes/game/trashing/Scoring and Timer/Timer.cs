@@ -4,12 +4,16 @@ using System;
 public class Timer : RichTextLabel
 {
 
-    private float timeElapsed = 90f;
+    [Export]public float timeElapsed = 10f;
     private int minutes;
     private int seconds;
     private int milliseconds;
     private string timeString;
-
+    TrashGameGlobal g;
+    public override void _Ready()
+    {
+        g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
+    }
     public override void _Process(float delta)
     { 
         
@@ -23,9 +27,13 @@ public class Timer : RichTextLabel
        
         if (timeElapsed <= 0)
         {
-            GetTree().ChangeScene("res://scenes/worlds/pludmale/Pludmale.tscn");
-           
+            GD.Print("Game Over");
+            GD.Print(g.score);
+            Score.AddScore(g.score);
+            GetTree().ChangeScene(PlayerProgress.LastScene);
+            PlayerProgress.TaskFinished(PlayerProgress.Tasks.TrashPludmale);
         }
+       
     }
             
     
