@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/game/wakeBoarding/ObjectSpawner.cs" type="Script" id=1]
 [ext_resource path="res://assets/Tiles/Frame3.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/Tiles/Frame1.png" type="Texture" id=5]
 [ext_resource path="res://assets/Tiles/Frame2.png" type="Texture" id=6]
 [ext_resource path="res://assets/Tiles/water.tres" type="Texture" id=7]
+[ext_resource path="res://scenes/menus/MiddleMenu/MiddleMenu.tscn" type="PackedScene" id=8]
 
 [sub_resource type="TileSet" id=5]
 0/name = "water.tres 0"
@@ -23,9 +24,6 @@
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 433 )
 
 [sub_resource type="AnimatedTexture" id=4]
 frames = 3
@@ -65,6 +63,9 @@ frame_2/delay_sec = 0.0
 1/shapes = [  ]
 1/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 433 )
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 394.5 )
 
@@ -84,48 +85,50 @@ tile_data = PoolIntArray( -655377, 0, 0, -655376, 0, 0, -655375, 0, 0, -655374, 
 autostart = true
 script = ExtResource( 1 )
 
-[node name="Border_Left" type="StaticBody2D" parent="."]
-position = Vector2( -142, 8 )
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
-position = Vector2( 32, 9 )
-shape = SubResource( 2 )
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
 cell_size = Vector2( 32, 25 )
 format = 1
 tile_data = PoolIntArray( -1507325, 1, 0, -1376260, 1, 0, -1441789, 1, 0, -1310724, 1, 0, -1376253, 1, 0, -1245188, 1, 0, -1310717, 1, 0, -1179652, 1, 0, -1245181, 1, 0, -1114116, 1, 0, -1179645, 1, 0, -1048580, 1, 0, -1114109, 1, 0, -983044, 1, 0, -1048573, 1, 0, -917508, 1, 0, -983037, 1, 0, -851972, 1, 0, -917501, 1, 0, -786436, 1, 0, -851965, 1, 0, -720900, 1, 0, -786429, 1, 0, -655364, 1, 0, -720893, 1, 0, -589828, 1, 0, -655357, 1, 0, -524292, 1, 0, -589821, 1, 0, -458756, 1, 0, -524285, 1, 0, -393220, 1, 0, -458749, 1, 0, -327684, 1, 0, -393213, 1, 0, -262148, 1, 0, -327677, 1, 0, -196612, 1, 0, -262141, 1, 0, -131076, 1, 0, -196605, 1, 0, -65540, 1, 0, -131069, 1, 0, -4, 1, 0, -65533, 1, 0, 65532, 1, 0, 3, 1, 0, 131068, 1, 0, 65539, 1, 0, 196604, 1, 0, 131075, 1, 0, 262140, 1, 0, 196611, 1, 0, 327676, 1, 0, 262147, 1, 0, 393212, 1, 0, 327683, 1, 0, 458748, 1, 0, 393219, 1, 0, 524284, 1, 0, 458755, 1, 0, 589820, 1, 0, 524291, 1, 0, 655356, 1, 0, 589827, 1, 0, 720892, 1, 0, 655363, 1, 0, 786428, 1, 0, 720899, 1, 0, 851964, 1, 0, 786435, 1, 0, 917500, 1, 0, 851971, 1, 0, 983036, 1, 0, 917507, 1, 0, 1048572, 1, 0, 983043, 1, 0, 1114108, 1, 0, 1048579, 1, 0, 1179644, 1, 0, 1114115, 1, 0, 1245180, 1, 0, 1179651, 1, 0, 1310716, 1, 0, 1245187, 1, 0, 1376252, 1, 0, 1310723, 1, 0, 1441788, 1, 0, 1376259, 1, 0, 1507324, 1, 0, 1441795, 1, 0, 1572860, 1, 0, 1507331, 1, 0, 1638396, 1, 0, 1572867, 1, 0 )
 
-[node name="Border_Up" type="StaticBody2D" parent="."]
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="Border_Left" type="StaticBody2D" parent="Borders"]
+position = Vector2( -142, 8 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Border_Left"]
+position = Vector2( 32, 9 )
+shape = SubResource( 2 )
+
+[node name="Border_Up" type="StaticBody2D" parent="Borders"]
 position = Vector2( 2, -348 )
 rotation = 1.5708
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Up"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Border_Up"]
 position = Vector2( 36, 9.99987 )
 shape = SubResource( 2 )
 disabled = true
 
-[node name="Border_Right" type="StaticBody2D" parent="."]
+[node name="Border_Right" type="StaticBody2D" parent="Borders"]
 position = Vector2( 121, 8 )
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Border_Right"]
 position = Vector2( -11, 0 )
 shape = SubResource( 1 )
 
-[node name="Border_Down" type="StaticBody2D" parent="."]
+[node name="Border_Down" type="StaticBody2D" parent="Borders"]
 position = Vector2( 2, 284 )
 rotation = 1.5708
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Down"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Border_Down"]
 position = Vector2( 31, 2 )
 shape = SubResource( 2 )
 one_way_collision_margin = 0.0
@@ -134,5 +137,8 @@ one_way_collision_margin = 0.0
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 z_index = 1
+
+[node name="MiddleMenu" parent="." instance=ExtResource( 8 )]
+visible = false
 
 [connection signal="timeout" from="Node/Timer" to="Node/Timer" method="_on_Timer_timeout"]

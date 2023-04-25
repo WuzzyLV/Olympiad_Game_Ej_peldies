@@ -521,7 +521,7 @@ extents = Vector2( 17.5, 648.75 )
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 57.5, 768.5 )
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 
 [node name="GenericTrigger" type="Area2D" parent="."]
 scale = Vector2( 1, 1.33798 )
@@ -584,6 +584,7 @@ Speed = 400.0
 remote_path = NodePath("../../Camera2D2")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
+current = true
 limit_left = -600
 limit_top = -700
 limit_right = 600
