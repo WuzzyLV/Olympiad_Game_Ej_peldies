@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/game/fishing/PlayerController.cs" type="Script" id=1]
 [ext_resource path="res://scenes/game/fishing/FishAI.cs" type="Script" id=2]
 [ext_resource path="res://scenes/game/fishing/ProgressBar.cs" type="Script" id=3]
 [ext_resource path="res://scenes/menus/MiddleMenu/MiddleMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/menus/tutorials/fishingTutorial/FishingTutorial.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -88,6 +89,8 @@ __meta__ = {
 [node name="MiddleMenu" parent="." instance=ExtResource( 4 )]
 visible = false
 LabelMSG = "Makšķerēšana beigusies"
+
+[node name="Tutorial" parent="." instance=ExtResource( 5 )]
 
 [connection signal="area_entered" from="Path2D/FishPath/Area2D" to="ProgressBar" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Path2D/FishPath/Area2D" to="ProgressBar" method="_on_Area2D_area_exited"]

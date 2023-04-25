@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://assets/Tiles/water.tres" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/waterwaveG.tres" type="Texture" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://assets/objects/raw_textures/sandgrass.png" type="Texture" id=21]
 [ext_resource path="res://assets/objects/raw_textures/Bench.png" type="Texture" id=22]
 [ext_resource path="res://assets/logic/GenericTrigger/GenericTrigger.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/worlds/WorldDoneCheck.cs" type="Script" id=24]
 
 [sub_resource type="TileSet" id=1]
 0/name = "water.tres 0"
@@ -320,6 +321,7 @@ extents = Vector2( 57.5, 768.5 )
 extents = Vector2( 54, 211.5 )
 
 [node name="Beberlini" type="Node2D"]
+script = ExtResource( 24 )
 
 [node name="TileMaps" type="Node2D" parent="."]
 
