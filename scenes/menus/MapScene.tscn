@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/menus/map/LocationButton.cs" type="Script" id=1]
 [ext_resource path="res://assets/fonts/consola.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/menus/map/TowerIcon.png" type="Texture" id=4]
 [ext_resource path="res://scenes/menus/map/ziplineIcon.png" type="Texture" id=5]
 [ext_resource path="res://scenes/menus/map/Beachicon.png" type="Texture" id=6]
+[ext_resource path="res://scenes/menus/MapSceneRoot.cs" type="Script" id=7]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0.164706 )
@@ -42,6 +43,7 @@ corner_radius_bottom_left = 10
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 7 )
 
 [node name="Map" type="Sprite" parent="."]
 position = Vector2( 511, 300 )
