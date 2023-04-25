@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://assets/Tiles/water.tres" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/waterwaveG.tres" type="Texture" id=2]
@@ -317,6 +317,9 @@ extents = Vector2( 57.5, 768.5 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 54, 211.5 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 178.5, 120.5 )
 
 [node name="Beberlini" type="Node2D"]
 
@@ -956,5 +959,17 @@ shape = SubResource( 7 )
 position = Vector2( 540, -392 )
 shape = SubResource( 7 )
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -232, 120 )
+script = ExtResource( 17 )
+ToGoScene = "res://scenes/worlds/beberlini/BeberlinuTests/Q1.tscn"
+ReturnScene = "res://scenes/worlds/beberlini/Beberlini.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 160, 32 )
+shape = SubResource( 28 )
+
 [connection signal="body_entered" from="Wakeboard" to="Wakeboard" method="BodyEntered"]
 [connection signal="body_exited" from="Wakeboard" to="Wakeboard" method="BodyExited"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="BodyEntered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="BodyExited"]
