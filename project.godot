@@ -18,6 +18,7 @@ config/icon="res://icon.png"
 
 TrashGameGlobal="*res://TrashGameGlobal.cs"
 Score="*res://src/Score.cs"
+PlayerProgress="*res://src/PlayerProgress.cs"
 
 [display]
 

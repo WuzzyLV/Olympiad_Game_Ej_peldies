@@ -6,7 +6,7 @@ public class Label : Godot.Label
 
     public override void _Ready()
     {
-        Text = "Paldies par spēli, tavu punktu sakits: " + Score.GetScore();
+        Text = "Paldies par spēli, tavu punktu skaits: " + Score.GetScore();
     }
 
 
