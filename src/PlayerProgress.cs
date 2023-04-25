@@ -9,6 +9,7 @@ public class PlayerProgress : Node
     {
         BoatGameBeberlini,
         FishingBeberlini,
+        FishingEzers,
         TrashPludmale,
         TestBeberlini,
         TestPludmale,

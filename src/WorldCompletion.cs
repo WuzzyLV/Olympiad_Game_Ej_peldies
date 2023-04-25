@@ -27,7 +27,7 @@ public class WorldCompletion : Node
             case Worlds.Pludmale:
                 return IsPludmaleCompleted();
             case Worlds.Ezers:
-                return false;
+                return IsEzersCompleted();
             default:
                 return false;
         }
@@ -38,8 +38,8 @@ public class WorldCompletion : Node
     {
         return 
             PlayerProgress.IsTaskCompleted(PlayerProgress.Tasks.FishingBeberlini) &&
-            PlayerProgress.IsTaskCompleted(PlayerProgress.Tasks.BoatGameBeberlini) //&&
-            //PlayerProgress.IsTaskCompleted(PlayerProgress.Tasks.TestBeberlini)
+            PlayerProgress.IsTaskCompleted(PlayerProgress.Tasks.BoatGameBeberlini) &&
+            PlayerProgress.IsTaskCompleted(PlayerProgress.Tasks.TestBeberlini)
             ;
     }
 
@@ -53,7 +53,10 @@ public class WorldCompletion : Node
 
     public static bool IsEzersCompleted()
     {
-        return false;
+        return
+            PlayerProgress.IsTaskCompleted(PlayerProgress.Tasks.TestEzers) &&
+            PlayerProgress.IsTaskCompleted(PlayerProgress.Tasks.FishingEzers)
+            ;
     }
 
     public static bool AllWorldsDone()
