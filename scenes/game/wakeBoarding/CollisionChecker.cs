@@ -8,8 +8,11 @@ public class CollisionChecker : Area2D
         if(body.Name != "Boat" && body.Name != "WakeBoard" && body.Name != "Border_Right" && body.Name != "Border_Left" &&  body.Name != "Border_Up" && body.Name != "Border_Down")
         {
             ObjectSpawner s = GetNode<ObjectSpawner>("/root/Node2D/Node/Timer");
-            GetTree().ChangeScene("res://scenes/worlds/beberlini/Beberlini.tscn");
+            //TODO improve score system
             Score.AddScore((int)s.time);
+            
+            PlayerProgress.TaskFinished(PlayerProgress.Tasks.BoatGameBeberlini);
+            GetTree().ChangeScene(PlayerProgress.LastScene);
         }
     }
 }

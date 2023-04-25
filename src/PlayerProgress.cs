@@ -26,7 +26,7 @@ public class PlayerProgress : Node
     
     public static bool IsTaskCompleted(Tasks task)
     {
-        return _tasksCompleted[task];
+        return _tasksCompleted.ContainsKey(task);
     }
 
     public static void TaskFinished(Tasks task)
