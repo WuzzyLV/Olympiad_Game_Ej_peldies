@@ -39,11 +39,13 @@ public class GlassTrashCan : Area2D
             g.dropped = true;
             g.picked = false;
             g.score--;
+            Score.AddScore(-1);
             g.plastic = false; g.paper = false;
             return;
         }
         g.picked = false;
         g.glass = false;
+        Score.AddScore(1);
         g.score++;
         g.dropped = true;
     }
