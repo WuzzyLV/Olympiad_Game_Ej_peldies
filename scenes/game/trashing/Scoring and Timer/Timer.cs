@@ -23,7 +23,7 @@ public class Timer : RichTextLabel
        
         if (timeElapsed <= 0)
         {
-            GetTree().ChangeScene("res://scenes/game/trashing/Scenes/GameOverScreen.tscn");
+            GetTree().ChangeScene("res://scenes/worlds/pludmale/Pludmale.tscn");
            
         }
     }

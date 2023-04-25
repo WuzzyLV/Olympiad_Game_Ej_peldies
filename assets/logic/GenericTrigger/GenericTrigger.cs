@@ -29,13 +29,15 @@ public class GenericTrigger : Area2D
 
 
     //Signals
-    public void BodyEntered()
+    public void BodyEntered(Node body)
     {
-        isColliding = true;
+        if(body.Name == "player")
+            isColliding = true;
     }
     //redundant for now
-    public void BodyExited()
+    public void BodyExited(Node body)
     {
+        if(body.Name == "player")
         isColliding = false;
     }
 

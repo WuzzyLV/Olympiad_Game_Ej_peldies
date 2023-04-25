@@ -31,9 +31,9 @@ public class ItemSpawner : Godot.Timer
 
             
 
-            paperTrash.Position = new Vector2(rand.Next(-425, 425), rand.Next(-225, 225));
-            glassTrash.Position = new Vector2(rand.Next(-425, 425), rand.Next(-225, 225));
-            plasticTrash.Position = new Vector2(rand.Next(-425, 425), rand.Next(-225, 225));
+            paperTrash.Position = new Vector2(rand.Next(80, 912), rand.Next(95, 552));
+            glassTrash.Position = new Vector2(rand.Next(80, 912), rand.Next(95, 552));
+            plasticTrash.Position = new Vector2(rand.Next(80, 912), rand.Next(95, 552));
 
             int randNum = rand.Next(0, 3);
             if (randNum == 1)

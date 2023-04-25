@@ -867,5 +867,5 @@ shape = SubResource( 7 )
 position = Vector2( 540, -392 )
 shape = SubResource( 7 )
 
-[connection signal="body_entered" from="Wakeboard" to="Wakeboard" method="_on_Wakeboard_body_entered"]
-[connection signal="body_exited" from="Wakeboard" to="Wakeboard" method="_on_Wakeboard_body_exited"]
+[connection signal="body_entered" from="Wakeboard" to="Wakeboard" method="BodyEntered"]
+[connection signal="body_exited" from="Wakeboard" to="Wakeboard" method="BodyExited"]

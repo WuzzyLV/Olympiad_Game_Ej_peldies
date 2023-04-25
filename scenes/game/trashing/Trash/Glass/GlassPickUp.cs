@@ -7,13 +7,15 @@ public class GlassPickUp : Area2D
 
     public void _on_Glass_body_entered(Node body)
     {
-        colliding = true;
+        if(body.Name == "player")
+            colliding = true;
        
         
     }
     public void _on_Glass_body_exited(Node body)
     {
-        colliding = false;
+        if (body.Name == "player")
+            colliding = false;
     }
 
     public override void _PhysicsProcess(float delta)
