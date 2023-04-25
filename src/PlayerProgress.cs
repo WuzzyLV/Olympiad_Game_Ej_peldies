@@ -12,6 +12,7 @@ public class PlayerProgress : Node
         TrashPludmale,
         TestBeberlini,
         TestPludmale,
+        TestEzers
     }
     //Map for Tasks and bools
     private static Dictionary<Tasks, bool> _tasksCompleted = new Dictionary<Tasks, bool>();
