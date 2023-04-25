@@ -6,7 +6,7 @@ public class PlayerController : Godot.PathFollow2D
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
-    [Export] public String Key = "left_click";
+    [Export] public String Key = "interact";
     [Export]
     public float Speed = 10;
     [Export]

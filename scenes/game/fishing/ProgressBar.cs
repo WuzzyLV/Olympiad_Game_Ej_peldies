@@ -5,12 +5,13 @@ public class ProgressBar : Godot.ProgressBar
 {
     
     [Export] public float AddedAmount = 1f;
+    [Export] public float DivideValue = 2;
     private bool isColliding = false;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        
+        Value = MaxValue / 2;
     }
 
     public override void _Process(float delta)

@@ -15,14 +15,14 @@ public class TestRootNode : Node2D
     private bool _gameOver = false;
     private GenericButton[] _buttons= new GenericButton[4];
     
-    private Label _healthLabel;
+    private Godot.Label _healthLabel;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        _healthLabel = GetNode<Label>("Health");
+        _healthLabel = GetNode<Godot.Label>("Health");
         UpdateHealthLabel();
         //Set question to label
-        GetNode<Label>("Question").Text = Question;
+        GetNode<Godot.Label>("Question").Text = Question;
 
         //randomize answer order
         Random rand = new Random();
