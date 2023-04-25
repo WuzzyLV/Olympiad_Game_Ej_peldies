@@ -38,7 +38,7 @@ public class GenericTrigger : Area2D
     public void BodyExited(Node body)
     {
         if(body.Name == "player")
-        isColliding = false;
+            isColliding = false;
     }
 
 }
