@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/fonts/size20_nonBold.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/fonts/size16_nonBold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/game/test/GenericButton.cs" type="Script" id=3]
+[ext_resource path="res://scenes/game/test/TestRootNode.cs" type="Script" id=4]
+[ext_resource path="res://assets/stuff/Perch.png" type="Texture" id=5]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 1 )
+
+[node name="Q2" type="Node2D"]
+position = Vector2( 512, 304 )
+script = ExtResource( 4 )
+ReturnScene = "res://scenes/worlds/liepajas_ezers/LiepajasEzers.tscn"
+Question = "Kā sauc šo zivi?"
+Answers = PoolStringArray( "Asaris", "Līdaka", "Haizivs", "Zobenzivs" )
+
+[node name="Button1" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -280.0
+margin_top = 16.0
+margin_right = -25.0
+margin_bottom = 109.0
+rect_pivot_offset = Vector2( -408, -192 )
+custom_fonts/font = ExtResource( 2 )
+text = "Im not"
+script = ExtResource( 3 )
+
+[node name="Button2" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 279.0
+margin_bottom = 109.0
+rect_pivot_offset = Vector2( -408, -192 )
+custom_fonts/font = ExtResource( 2 )
+text = "???"
+script = ExtResource( 3 )
+
+[node name="Button3" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -280.0
+margin_top = 152.0
+margin_right = -25.0
+margin_bottom = 245.0
+rect_pivot_offset = Vector2( -408, -192 )
+custom_fonts/font = ExtResource( 2 )
+text = "Yes i agree"
+script = ExtResource( 3 )
+
+[node name="Button4" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 152.0
+margin_right = 279.0
+margin_bottom = 245.0
+rect_pivot_offset = Vector2( -408, -192 )
+custom_fonts/font = ExtResource( 2 )
+text = "no u"
+script = ExtResource( 3 )
+
+[node name="Health" type="Label" parent="."]
+margin_left = -496.0
+margin_top = -288.0
+margin_right = -400.0
+margin_bottom = -248.0
+rect_scale = Vector2( 0.952676, 0.952676 )
+text = "Health: X"
+autowrap = true
+
+[node name="Question" type="Label" parent="."]
+margin_left = -448.0
+margin_top = -360.0
+margin_right = -132.0
+margin_bottom = -267.0
+rect_scale = Vector2( 2.84, 2.84 )
+theme = SubResource( 1 )
+text = "Kā sauc šo zivi?"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Perch" type="Sprite" parent="."]
+position = Vector2( 5.87498, -92.125 )
+scale = Vector2( 5.97308, 5.58333 )
+texture = ExtResource( 5 )
