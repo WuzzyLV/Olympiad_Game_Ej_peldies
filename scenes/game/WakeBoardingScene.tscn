@@ -151,6 +151,7 @@ one_way_collision_margin = 0.0
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 129 )
 z_index = 1
 
 [node name="MiddleMenu" parent="." instance=ExtResource( 8 )]

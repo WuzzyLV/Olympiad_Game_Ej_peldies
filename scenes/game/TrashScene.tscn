@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/objects/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/game/trashing/Trash/Glass/GlassCan.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://scenes/game/trashing/Trash/Plastic/PlasticTrashCan.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Tiles/sand.png" type="Texture" id=7]
 [ext_resource path="res://scenes/game/trashing/Scoring and Timer/Timer.cs" type="Script" id=8]
-[ext_resource path="res://scenes/game/trashing/Scenes/GameScene.cs" type="Script" id=9]
 [ext_resource path="res://scenes/game/trashing/Area/ItemSpawner.cs" type="Script" id=10]
 [ext_resource path="res://assets/objects/prefabs/rock.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/Tiles/water.tres" type="Texture" id=12]
@@ -75,7 +74,6 @@ extents = Vector2( 1129.75, 15 )
 [node name="GameScene" type="Node2D"]
 position = Vector2( 512, 320 )
 scale = Vector2( 1, 1.00577 )
-script = ExtResource( 9 )
 
 [node name="BG" type="TileMap" parent="."]
 tile_set = SubResource( 7 )

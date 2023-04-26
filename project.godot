@@ -10,15 +10,16 @@ config_version=4
 
 [application]
 
-config/name="LakeGame_b2"
+config/name="Udens-Kratuves"
 run/main_scene="res://scenes/menus/MainMenu.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/objects/raw_textures/reinis.png"
 
 [autoload]
 
 TrashGameGlobal="*res://TrashGameGlobal.cs"
 Score="*res://src/Score.cs"
 PlayerProgress="*res://src/PlayerProgress.cs"
+Playtime="*res://src/Playtime.cs"
 
 [display]
 

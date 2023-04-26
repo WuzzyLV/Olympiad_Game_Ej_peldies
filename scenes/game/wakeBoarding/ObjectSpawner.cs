@@ -20,17 +20,22 @@ public class ObjectSpawner : Godot.Timer
 
             float height = GetViewport().Size.y;
             Random rand = new Random();
-            GD.Print("test");
             object1.Position = new Vector2(rand.Next(424, 600), 0);
             object2.Position = new Vector2(rand.Next(424, 600), 0);
-            GD.Print(height);
-            
+
             int randItem = rand.Next(0, 2);
             if(randItem == 0)
                 AddChild(object1);
             else
                 AddChild(object2);
 
+            //need a way to get the actual player position cant cause inside scene
+            /*Node2D targettedObj=(Node2D)this.object1.Instance();
+            GD.Print(GetNode<Node2D>("/root/Node2D/Player/").Position.x);
+            targettedObj.Position= new Vector2(GetNode<Node2D>("/root/Node2D/Player/Boat").Position.x
+                , 0);
+            AddChild(targettedObj);*/
+            
             WaitTime = rand.Next(1, 2);
             
     }
@@ -38,7 +43,6 @@ public class ObjectSpawner : Godot.Timer
     public override void _PhysicsProcess(float delta)
     {
         time += delta;
-        GD.Print((int)time);
 
     }
 }

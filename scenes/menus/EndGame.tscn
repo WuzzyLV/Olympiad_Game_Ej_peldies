@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Main menu assets/TitleScreen.png" type="Texture" id=1]
 [ext_resource path="res://scenes/menus/EndGame/Label.cs" type="Script" id=2]
 [ext_resource path="res://assets/fonts/size20_nonBold.tres" type="DynamicFont" id=3]
 [ext_resource path="res://scenes/menus/EndGame/quitButton.cs" type="Script" id=4]
+[ext_resource path="res://scenes/menus/PlaytimeShow.cs" type="Script" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -25,19 +26,31 @@ margin_bottom = 600.0
 texture = ExtResource( 1 )
 stretch_mode = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="ScoreLabel" type="Label" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -161.0
-margin_top = -170.5
-margin_right = 161.0
-margin_bottom = -53.5
+margin_left = -512.0
+margin_top = -129.0
+margin_right = 513.0
+margin_bottom = -71.0
 custom_fonts/font = ExtResource( 3 )
+text = "
+very epic pepic temp text"
 align = 1
 valign = 1
 script = ExtResource( 2 )
+
+[node name="Playtime" type="Label" parent="."]
+margin_top = 229.0
+margin_right = 1025.0
+margin_bottom = 296.0
+custom_fonts/font = ExtResource( 3 )
+text = "Laiks pavadīts spēlē: "
+align = 1
+valign = 1
+script = ExtResource( 5 )
 
 [node name="Button" type="Button" parent="."]
 margin_left = 424.0

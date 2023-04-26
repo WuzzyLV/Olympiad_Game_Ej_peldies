@@ -20,7 +20,7 @@ public class Pickup : Godot.Label
             time = 1f;
             counter = 1f;
         }
-
+        AddColorOverride("font_color", new Color(1, 1, 1, 1));
         if (g.plastic)
         {
             Text = "+1 Plastmass";
@@ -38,14 +38,21 @@ public class Pickup : Godot.Label
         }
 
         
-
+    
         if(g.dropped)
         {
             String s = "";
-            if (g.score>lastScore)
-                s = "+10";
+            GD.Print(g.score+ "score : "+lastScore+" lastscore");
+            if (g.score > lastScore)
+            {
+                AddColorOverride("font_color", new Color(0, 1, 0, 1));
+                s = "+10";   
+            }
             else
-                s = "-10";
+            {
+                AddColorOverride("font_color", new Color(1, 0, 0, 1));
+                s = "-10";   
+            }
             
             Text = s + " Punkti";
             time -= delta;
@@ -53,10 +60,11 @@ public class Pickup : Godot.Label
             if (counter <= 0 || g.picked)
             {
                 g.dropped = false;
+                lastScore = g.score;
             }
         }
-      
-        
+
+
 
         if (time <= 0)
         { 
