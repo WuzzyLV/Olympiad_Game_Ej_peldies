@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://assets/Tiles/grasspath.png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/sandHalf.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://assets/fonts/size16_nonBold.tres" type="DynamicFont" id=28]
 [ext_resource path="res://assets/objects/prefabs/TestBoard.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/worlds/WorldDoneCheck.cs" type="Script" id=30]
+[ext_resource path="res://scenes/menus/ScoreGUI/ScoreGUISCene.tscn" type="PackedScene" id=31]
 
 [sub_resource type="TileSet" id=1]
 0/name = "water.tres 0"
@@ -949,6 +950,8 @@ __meta__ = {
 
 [node name="TestBoard" parent="." instance=ExtResource( 29 )]
 position = Vector2( -68, -129 )
+
+[node name="SCoreGui" parent="." instance=ExtResource( 31 )]
 
 [connection signal="body_entered" from="TrashCollecting" to="TrashCollecting" method="BodyEntered"]
 [connection signal="body_exited" from="TrashCollecting" to="TrashCollecting" method="BodyExited"]

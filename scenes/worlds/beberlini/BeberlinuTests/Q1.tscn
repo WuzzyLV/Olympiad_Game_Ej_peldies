@@ -88,11 +88,10 @@ text = "Health: X"
 autowrap = true
 
 [node name="Question" type="Label" parent="."]
-margin_left = -448.0
-margin_top = -272.0
-margin_right = -132.0
-margin_bottom = -179.0
-rect_scale = Vector2( 2.84, 2.84 )
+margin_left = -375.0
+margin_top = -250.0
+margin_right = 374.0
+margin_bottom = -30.0
 theme = SubResource( 1 )
 text = "Kādus ieradumus jāievēro, lai peldēšanas pieredze būtu droša gan pie baseiniem, gan dabiskajos ūdeņos?"
 align = 1

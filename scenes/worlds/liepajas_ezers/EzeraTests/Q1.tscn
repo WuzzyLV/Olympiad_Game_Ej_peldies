@@ -89,11 +89,10 @@ text = "Health: X"
 autowrap = true
 
 [node name="Question" type="Label" parent="."]
-margin_left = -448.0
-margin_top = -360.0
-margin_right = -132.0
-margin_bottom = -267.0
-rect_scale = Vector2( 2.84, 2.84 )
+margin_left = -280.0
+margin_top = -250.0
+margin_right = 279.0
+margin_bottom = -107.0
 theme = SubResource( 1 )
 text = "Kā sauc šo zivi?"
 align = 1
@@ -101,6 +100,6 @@ valign = 1
 autowrap = true
 
 [node name="Pike" type="Sprite" parent="."]
-position = Vector2( -16, -120 )
-scale = Vector2( 4.13462, 4.80769 )
+position = Vector2( 0, -62 )
+scale = Vector2( 3.5, 3.5 )
 texture = ExtResource( 5 )
