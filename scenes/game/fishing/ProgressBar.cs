@@ -44,7 +44,7 @@ public class ProgressBar : Godot.ProgressBar
             return;
         }
         middleMenu.setScore(score);
-        PlayerProgress.TaskFinished(PlayerProgress.Tasks.FishingBeberlini);
+        PlayerProgress.TaskFinished(PlayerProgress.LastTask);
         middleMenu.show();
     }
 

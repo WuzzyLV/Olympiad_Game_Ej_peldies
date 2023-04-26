@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/menus/map/LocationButton.cs" type="Script" id=1]
 [ext_resource path="res://assets/fonts/consola.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://scenes/menus/map/ziplineIcon.png" type="Texture" id=5]
 [ext_resource path="res://scenes/menus/map/Beachicon.png" type="Texture" id=6]
 [ext_resource path="res://scenes/menus/MapSceneRoot.cs" type="Script" id=7]
+[ext_resource path="res://scenes/menus/MapMenuScore.cs" type="Script" id=8]
+[ext_resource path="res://assets/fonts/size20_nonBold.tres" type="DynamicFont" id=9]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0.164706 )
@@ -147,6 +149,15 @@ bbcode_text = "[center]Liepajas ezers[/center],
 Liepājas ezers, kas ir aptuveni 16 km garš un aptuveni 3 km plats, tā dziļums var sasniegt līdz 13 metriem. Ezers ir populārs makšķerēšanas galamērķis, kā arī tajā ir iespējams dažāadas ūdens aktivitātes."
 text = "Liepajas ezers,
 Liepājas ezers, kas ir aptuveni 16 km garš un aptuveni 3 km plats, tā dziļums var sasniegt līdz 13 metriem. Ezers ir populārs makšķerēšanas galamērķis, kā arī tajā ir iespējams dažāadas ūdens aktivitātes."
+
+[node name="Label" type="Label" parent="."]
+margin_left = 35.0
+margin_top = 61.0
+margin_right = 91.0
+margin_bottom = 75.0
+custom_fonts/font = ExtResource( 9 )
+text = "Punkti: X"
+script = ExtResource( 8 )
 
 [connection signal="mouse_entered" from="Beach" to="Beach" method="MouseEntered"]
 [connection signal="mouse_exited" from="Beach" to="Beach" method="MouseExited"]

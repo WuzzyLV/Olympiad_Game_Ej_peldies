@@ -19,6 +19,7 @@ public class PlayerProgress : Node
     //Map for Tasks and bools
     private static Dictionary<Tasks, bool> _tasksCompleted = new Dictionary<Tasks, bool>();
 
+    public static Tasks LastTask = Tasks.None;
     public static String LastScene = "res://scenes/menus/MainMenu.tscn";
     
     public override void _Ready()

@@ -31,6 +31,7 @@ public class Timer : RichTextLabel
        
         if (timeElapsed <= 0)
         {
+            g.score *= 10;
             GD.Print("Game Over");
 
             scoreInfo.setScore(g.score);

@@ -55,7 +55,7 @@ curve = SubResource( 1 )
 
 [node name="BooberPath" type="PathFollow2D" parent="Path2D"]
 position = Vector2( 480, 448 )
-rotation = -1.5708
+rotation = -1.56331
 loop = false
 script = ExtResource( 1 )
 
@@ -72,7 +72,7 @@ shape = SubResource( 3 )
 
 [node name="FishPath" type="PathFollow2D" parent="Path2D"]
 position = Vector2( 480, 448 )
-rotation = -1.5708
+rotation = -1.56331
 loop = false
 script = ExtResource( 2 )
 

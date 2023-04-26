@@ -25,6 +25,7 @@ public class GenericTrigger : Area2D
         
         if (Input.IsActionJustPressed(Hotkey))
         {
+            PlayerProgress.LastTask=Task;
             PlayerProgress.LastScene= ReturnScene;
             GetTree().ChangeScene(ToGoScene);   
         }
