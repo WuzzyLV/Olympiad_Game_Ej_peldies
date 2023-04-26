@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Timer : RichTextLabel
+public class Timer : Godot.Label
 {
 
     [Export]public float timeElapsed = 10f;
@@ -25,7 +25,7 @@ public class Timer : RichTextLabel
         minutes = Mathf.FloorToInt(timeElapsed / 60);
         seconds = Mathf.FloorToInt(timeElapsed % 60);
         milliseconds = Mathf.FloorToInt((timeElapsed % 1) * 100);
-        timeString = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
+        timeString = string.Format("{0:00} : {1:00} : {2:00}", minutes, seconds, milliseconds);
         Text = timeString;
        
        

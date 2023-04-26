@@ -1,12 +1,12 @@
 using Godot;
 using System;
 
-public class TrashScoreLabel : RichTextLabel
+public class TrashScoreLabel : Godot.Label
 {
 
     public override void _Ready()
     {
-        Text = "asdasd";
+        Text = "Punkti: 0";
     }
     public override void _PhysicsProcess(float delta)
     {

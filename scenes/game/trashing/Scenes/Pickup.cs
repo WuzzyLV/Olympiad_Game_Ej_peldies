@@ -6,10 +6,11 @@ public class Pickup : Godot.Label
 {
     float time = 1f, counter = 1;
    
-  
+    float lastScore = 0;
+    
     public override void _Process(float delta)
     {
-
+    
 
         TrashGameGlobal g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
         
@@ -40,7 +41,13 @@ public class Pickup : Godot.Label
 
         if(g.dropped)
         {
-            Text = "-1 Lieta";
+            String s = "";
+            if (g.score>lastScore)
+                s = "+10";
+            else
+                s = "-10";
+            
+            Text = s + " Punkti";
             time -= delta;
             counter -= delta;
             if (counter <= 0 || g.picked)
