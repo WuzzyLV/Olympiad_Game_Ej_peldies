@@ -75,7 +75,9 @@ public class TestRootNode : Node2D
         if (Health <= 0)
         {
             _gameOver = true;
-            GameEndProcedure();
+            
+            SceneTreeTimer timer = GetTree().CreateTimer(0.5f, true);
+            timer.Connect("timeout", this, "GameEndProcedure");
         }
     }
     

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/size20_nonBold.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/menus/ScoreGUI/ScoreGUILabel.cs" type="Script" id=2]
+
+[node name="ScoreGui" type="CanvasLayer"]
+
+[node name="Score Label" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 154.0
+margin_bottom = 81.0
+custom_colors/font_color = Color( 0.427451, 0.85098, 0.470588, 1 )
+custom_fonts/font = ExtResource( 1 )
+script = ExtResource( 2 )
