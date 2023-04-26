@@ -19,7 +19,7 @@ bg_color = Color( 0.227451, 0.266667, 0.4, 1 )
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 480, 448, 0, 0, 0, 0, 481.172, 291.404, 0, 0, 0, 0, 480, 128 )
+"points": PoolVector2Array( 0, 0, 0, 0, 480, 448, 0, 0, 0, 0, 480, 138.667 )
 }
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -49,15 +49,16 @@ percent_visible = false
 script = ExtResource( 3 )
 
 [node name="Path2D" type="Path2D" parent="."]
-position = Vector2( -208, -144 )
+position = Vector2( -208, -140 )
 scale = Vector2( 1.5, 1.5 )
 curve = SubResource( 1 )
 
 [node name="BooberPath" type="PathFollow2D" parent="Path2D"]
 position = Vector2( 480, 448 )
-rotation = -1.56331
+rotation = -1.55086
 loop = false
 script = ExtResource( 1 )
+VelocityCap = 250.0
 
 [node name="Sprite" type="Sprite" parent="Path2D/BooberPath"]
 position = Vector2( 20, 0 )
@@ -72,7 +73,7 @@ shape = SubResource( 3 )
 
 [node name="FishPath" type="PathFollow2D" parent="Path2D"]
 position = Vector2( 480, 448 )
-rotation = -1.56331
+rotation = -1.55086
 loop = false
 script = ExtResource( 2 )
 
