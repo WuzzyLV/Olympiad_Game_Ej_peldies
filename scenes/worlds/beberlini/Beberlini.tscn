@@ -420,7 +420,7 @@ Task = 1
 
 [node name="player" parent="." instance=ExtResource( 13 )]
 position = Vector2( 23, 22 )
-Speed = 400.0
+Speed = 250.0
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="player"]
 remote_path = NodePath("../../Camera2D3")

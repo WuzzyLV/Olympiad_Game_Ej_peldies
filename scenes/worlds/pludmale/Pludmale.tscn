@@ -736,7 +736,7 @@ tile_data = PoolIntArray( -3997711, 1, 0, -3997710, 1, 0, -3932151, 1, 0, -36044
 
 [node name="player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 328, -376 )
-Speed = 400.0
+Speed = 250.0
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="player"]
 remote_path = NodePath("../../Camera2D2")

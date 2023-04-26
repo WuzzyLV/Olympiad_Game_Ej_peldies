@@ -85,7 +85,7 @@ public class TestRootNode : Node2D
     private void UpdateHealthLabel()
     {
         _healthLabel.Text = "Meiģinājumi: " + Health;
-        _healthLabel.SizeFlagsHorizontal = (int) Control.SizeFlags.ExpandFill;
+        _healthLabel.MarginRight =  -300;
     }
     
     /*

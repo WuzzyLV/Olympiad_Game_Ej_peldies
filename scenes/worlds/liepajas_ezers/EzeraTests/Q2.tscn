@@ -82,8 +82,9 @@ script = ExtResource( 3 )
 [node name="Health" type="Label" parent="."]
 margin_left = -496.0
 margin_top = -288.0
-margin_right = -400.0
+margin_right = -399.0
 margin_bottom = -248.0
+grow_horizontal = 2
 rect_scale = Vector2( 0.952676, 0.952676 )
 custom_fonts/font = ExtResource( 2 )
 text = "Health: X"
