@@ -844,49 +844,6 @@ scale = Vector2( 2, 2 )
 z_index = 5
 Task = 4
 
-[node name="Area2D" type="Area2D" parent="TrashCollecting"]
-position = Vector2( -165, 1629 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashCollecting/Area2D"]
-position = Vector2( 304, -216 )
-shape = SubResource( 29 )
-
-[node name="Trash1" type="Label" parent="TrashCollecting/Area2D"]
-visible = false
-margin_left = 179.0
-margin_top = -248.0
-margin_right = 233.0
-margin_bottom = -231.0
-custom_fonts/font = ExtResource( 28 )
-text = "Papīrs"
-align = 1
-valign = 1
-script = ExtResource( 27 )
-
-[node name="Trash2" type="Label" parent="TrashCollecting/Area2D"]
-visible = false
-margin_left = 273.0
-margin_top = -248.0
-margin_right = 327.0
-margin_bottom = -231.0
-custom_fonts/font = ExtResource( 28 )
-text = "Stikls"
-align = 1
-valign = 1
-script = ExtResource( 27 )
-
-[node name="Trash3" type="Label" parent="TrashCollecting/Area2D"]
-visible = false
-margin_left = 348.0
-margin_top = -248.0
-margin_right = 388.0
-margin_bottom = -231.0
-custom_fonts/font = ExtResource( 28 )
-text = "Plastmasa"
-align = 1
-valign = 1
-script = ExtResource( 27 )
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -894,22 +851,9 @@ position = Vector2( 304, -216 )
 shape = SubResource( 29 )
 
 [node name="Trash1" type="Label" parent="Area2D"]
-visible = false
 margin_left = 179.0
 margin_top = -248.0
 margin_right = 233.0
-margin_bottom = -231.0
-custom_fonts/font = ExtResource( 28 )
-text = "Papīrs"
-align = 1
-valign = 1
-script = ExtResource( 27 )
-
-[node name="Trash2" type="Label" parent="Area2D"]
-visible = false
-margin_left = 273.0
-margin_top = -248.0
-margin_right = 327.0
 margin_bottom = -231.0
 custom_fonts/font = ExtResource( 28 )
 text = "Stikls"
@@ -917,8 +861,18 @@ align = 1
 valign = 1
 script = ExtResource( 27 )
 
+[node name="Trash2" type="Label" parent="Area2D"]
+margin_left = 273.0
+margin_top = -248.0
+margin_right = 327.0
+margin_bottom = -231.0
+custom_fonts/font = ExtResource( 28 )
+text = "Papīrs"
+align = 1
+valign = 1
+script = ExtResource( 27 )
+
 [node name="Trash3" type="Label" parent="Area2D"]
-visible = false
 margin_left = 348.0
 margin_top = -248.0
 margin_right = 388.0
@@ -952,12 +906,6 @@ position = Vector2( -68, -129 )
 
 [connection signal="body_entered" from="TrashCollecting" to="TrashCollecting" method="BodyEntered"]
 [connection signal="body_exited" from="TrashCollecting" to="TrashCollecting" method="BodyExited"]
-[connection signal="body_entered" from="TrashCollecting/Area2D" to="TrashCollecting/Area2D/Trash1" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="TrashCollecting/Area2D" to="TrashCollecting/Area2D/Trash2" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="TrashCollecting/Area2D" to="TrashCollecting/Area2D/Trash3" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="TrashCollecting/Area2D" to="TrashCollecting/Area2D/Trash1" method="_on_Area2D_body_exited"]
-[connection signal="body_exited" from="TrashCollecting/Area2D" to="TrashCollecting/Area2D/Trash2" method="_on_Area2D_body_exited"]
-[connection signal="body_exited" from="TrashCollecting/Area2D" to="TrashCollecting/Area2D/Trash3" method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D/Trash1" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D/Trash2" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D/Trash3" method="_on_Area2D_body_entered"]
