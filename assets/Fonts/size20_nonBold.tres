@@ -3,7 +3,11 @@
 [ext_resource path="res://assets/fonts/consola.ttf" type="DynamicFontData" id=1]
 
 [resource]
+<<<<<<< HEAD
+size = 22
+=======
 size = 24
+>>>>>>> 093b352e11b382a4aa28948cbf251650a1d0e46d
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
