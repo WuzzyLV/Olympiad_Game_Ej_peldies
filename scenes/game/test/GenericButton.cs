@@ -20,12 +20,15 @@ public class GenericButton : Button
         }
         if (CorrectAnswer)
         {
+            AddColorOverride("font_color_disabled", new Color(0, 1, 0));
+            Disabled=true;
             root.RightAnswer();
         }
         else
         {
             root.WrongAnswer();
-            Hide();
+            AddColorOverride("font_color_disabled", new Color(1, 0, 0));
+            Disabled=true;
         }
     }
 }

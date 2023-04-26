@@ -61,7 +61,11 @@ public class TestRootNode : Node2D
 
     public void RightAnswer()
     {
-        _GameEndProcedure(ReturnScene);
+        SceneTreeTimer timer = GetTree().CreateTimer(0.5f, true);
+        
+        timer.Connect("timeout", this, "GameEndProcedure");
+        
+        //GameEndProcedure(ReturnScene);
     }
 
     public void WrongAnswer()
@@ -71,15 +75,15 @@ public class TestRootNode : Node2D
         if (Health <= 0)
         {
             _gameOver = true;
-            _GameEndProcedure(ReturnScene);
+            GameEndProcedure();
         }
     }
     
-    private void _GameEndProcedure(String scene)
+    public void GameEndProcedure()
     {
         PlayerProgress.TaskFinished(Task);
         Score.AddScore(100*Health);
-        GetTree().ChangeScene(scene);
+        GetTree().ChangeScene(ReturnScene);
     }
     
     private void UpdateHealthLabel()
