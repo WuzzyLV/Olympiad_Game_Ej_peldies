@@ -44,6 +44,7 @@ public class ProgressBar : Godot.ProgressBar
             return;
         }
         middleMenu.setScore(score);
+        Score.AddScore(score);
         PlayerProgress.TaskFinished(PlayerProgress.LastTask);
         middleMenu.show();
     }

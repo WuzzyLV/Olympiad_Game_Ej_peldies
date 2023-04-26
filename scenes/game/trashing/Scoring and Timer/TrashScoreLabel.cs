@@ -11,7 +11,7 @@ public class TrashScoreLabel : Godot.Label
     public override void _PhysicsProcess(float delta)
     {
         TrashGameGlobal g = GetNode<TrashGameGlobal>("/root/TrashGameGlobal");
-        Text = "Punkti: " + g.score;
+        Text = "Punkti: " + g.score*10;
         
     }
 
