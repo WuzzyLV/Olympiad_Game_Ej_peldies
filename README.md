@@ -1,4 +1,6 @@
-# LakeGameMain
+# "Ej peldies"
+Won 3rd place in a City level Olympiad
+
+![image](https://github.com/WuzzyLV/LakeGameMain/assets/54778608/c757a76b-d929-4857-8240-c16a859ce830)
 
 [Trello](https://trello.com/b/naWnzWIH/water-reservours-game-school)
-![image (1)](https://user-images.githubusercontent.com/122517407/234713964-02a06d6c-8ef2-4bd8-83a8-fbba1020eeee.jpg)
